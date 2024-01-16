@@ -3,7 +3,6 @@ import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, NavLink } from 'react-router-dom'; // Import useNavigate
 import './LoginForm.css';
-import SignupForm from './SignUpForm';
 
 function LoginForm() {
     const dispatch = useDispatch();
@@ -55,12 +54,12 @@ function LoginForm() {
                     <div className="card1">
                         <h1 className="signInH1">Sign in</h1>
                             <label className="login-label">Email
-                                <input type="text" id="email"/>
+                                <input type="text" value={credential} onChange={(e) => setCredential(e.target.value)} required/>
                             </label>
                             <label className="login-label">Password
                                 <input type="password" value={password} id="password" onChange={(e) => setPassword(e.target.value)} required/>
                             </label>
-                        <button className="loginBtn" onClick={handleSubmit}>Continue</button>
+                        <button className="loginBtn" type="submit">Continue</button>
                         <button className='demoLoginBtn' onClick={loginDemo}>Demo Log In</button>
                         <p>
                             By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.

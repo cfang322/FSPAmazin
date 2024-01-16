@@ -89,13 +89,13 @@ function SignupForm() {
                 <p>
                     By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
                 </p>
-                {/* <span className="divider"></span> */}
+                <div className="inside-divider"></div>
                 <p className='question'>Already have an account?
                     <NavLink className='have-acc' to='/login'>Sign in</NavLink>
                 </p>
                 </div>
             </form>
-            <div className="divider">
+            <div className="form-divider">
                 <div className="links">
                     <a href="https://github.com/cfang322">GitHub</a>
                     <a href="https://www.linkedin.com/in/yaqi-fang-125807250/">LinkedIn</a>
