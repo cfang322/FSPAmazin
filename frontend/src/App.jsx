@@ -9,6 +9,8 @@ import * as sessionActions from './store/session';
 function Layout() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+  
+
 
   useEffect(() => {
     dispatch(sessionActions.restoreSession()).then(() => {
@@ -18,7 +20,7 @@ function Layout() {
 
   return (
     <>
-      <Navigation />
+      {<Navigation />}
       {isLoaded && <Outlet />}
     </>
   );
@@ -45,7 +47,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router} />
+  );
 }
 
 export default App;

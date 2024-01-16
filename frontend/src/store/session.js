@@ -30,13 +30,26 @@ export const restoreSession = () => async dispatch => {
 };
 
 export const login = ({ credential, password }) => async dispatch => {
-    const response = await csrfFetch("/api/session", {
-        method: "POST",
-        body: JSON.stringify({ credential, password })
-    });
-    const data = await response.json();
-    dispatch(setUser(data.user));
-    return response;
+    try {
+        const response = await csrfFetch("/api/session", {
+            method: "POST",
+            body: JSON.stringify({ credential, password })
+        });
+
+        // Check if the response status is ok
+        if (!response.ok) {
+            // Handle error status (e.g., unauthorized)
+            const errorData = await response.json();
+            throw errorData;
+        }
+        const data = await response.json();
+        dispatch(setUser(data.user));
+        return response;
+    } catch (error) {
+        // Handle any login errors
+        console.error("Login error:", error);
+        throw error; // Rethrow the error for further handling if needed
+    }
 };
 
 export const signup = (user) => async (dispatch) => {

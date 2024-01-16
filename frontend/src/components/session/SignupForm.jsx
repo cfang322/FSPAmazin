@@ -38,50 +38,69 @@ function SignupForm() {
 
     return (
         <>
-        <h1>Sign Up</h1>
-        <form onSubmit={handleSubmit}>
-            <ul>
-            {errors.map(error => <li key={error}>{error}</li>)}
-            </ul>
-            <label>
-            Email
-            <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-            />
-            </label>
-            <label>
-            Username
-            <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
-            />
-            </label>
-            <label>
-            Password
-            <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-            />
-            </label>
-            <label>
-            Confirm Password
-            <input
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                required
-            />
-            </label>
-            <button type="submit">Sign Up</button>
-        </form>
-        </>
+        <head>
+        <title>Amazin Signup Form</title>
+        </head>
+        <section>
+            <div className="logo">
+                <img src="https://pbs.twimg.com/profile_images/1722015850168037376/OiNYYeZQ_400x400.jpg" alt="Amazin Logo" />
+            </div>
+            <div className="outer-box">
+                <div className="inner-box">
+                    <h1>Create account</h1>
+                    <div className="form">
+                        <ul>
+                            {errors.map(error => <li key={error}>{error}</li>)}
+                        </ul>
+                        <label>Your name
+                            <input
+                                type="text"
+                                maxLength="50"
+                                placeholder="First and last name"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </label>
+                        <label>Mobile number or email
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                required
+                            />
+                        </label>
+                        <label>Password
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                        </label>
+                        <label>Re-enter Password
+                            <input
+                                type="password"
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                required
+                            />
+                        </label>
+                        <div className="btn">
+                            <button type="submit">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <footer>
+            <div className="links">
+                <a href="https://github.com/cfang322">GitHub</a>
+                <a href="https://www.linkedin.com/in/yaqi-fang-125807250/">LinkedIn</a>
+            </div>
+            <p>© Winter 2024, Amazin.com, cloned by Yaqi Fang</p>
+        </footer>
+    </section>
+        </>     
     );
 }
 
