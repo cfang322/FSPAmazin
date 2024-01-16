@@ -1,13 +1,13 @@
 export function storeCSRFToken(response) {
     const csrfToken = response.headers.get("X-CSRF-Token");
     if (csrfToken) sessionStorage.setItem("X-CSRF-Token", csrfToken);
-};
+}
 
 export async function restoreCSRF() {
     const response = await csrfFetch("/api/session");
     storeCSRFToken(response);
     return response;
-};
+}
 
 async function csrfFetch(url, options = {}) {
     // set options.method to 'GET' if there is no method
@@ -34,6 +34,6 @@ async function csrfFetch(url, options = {}) {
     // if the response status code is under 400, then return the response to the
     // next promise chain
     return res;
-};
+}
 
 export default csrfFetch;
