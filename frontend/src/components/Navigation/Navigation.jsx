@@ -38,20 +38,7 @@ function Navigation() {
     return (
         <>
         <ul className='navBar'>
-            <div className='git'>
-            <a href="https://github.com/Dominic5591">
-                <img src="" alt="" />
-            </a>
-            </div>
-            <div className='linkedin'>
-            <a href="https://www.linkedin.com/in/dominic-c-1076322a8/">
-                <img src="" alt="" />
-            </a>
-            </div>
             <div className='home'>
-            <NavLink to="/">
-                <img src="" alt="arrow" className='homeArrow' />
-            </NavLink>
             </div>
             <li className="dropdown">
             <button className="dropbtn">{sessionUser ? `Hello, ${sessionUser.username}` : "Hello, sign in"}</button>
@@ -59,22 +46,9 @@ function Navigation() {
                 {sessionLinks}
             </div>
             </li>
-            <div>
-            <NavLink to="/">
-                <div className='cartDivOne'>
-                <div className='cartDivTwo'>
-                    <p className='cartNum'>0</p>
-                    <img src="" alt="cart" className='cartPng'/>
-                </div>
-                </div>
-            </NavLink>
-            </div>
         </ul>
         <ul className='lowerNavBar'>
-            <li className='liPlaceholder'>Books</li>
-            <li className='liPlaceholder'>Electronics</li>
-            <li className='liPlaceholder'>Groceries</li>
-            <li className='liPlaceholder'>Today&apos;s Deals</li>
+            
         </ul>
         </>
     );

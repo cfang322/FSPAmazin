@@ -17,8 +17,8 @@
     display: block;
 }
 
-.card {
-    width: 296px;
+.login-form {
+    /* width: 296px;
     height: 240px;
     padding: 20px 26px;
     display: flex;
@@ -26,19 +26,25 @@
     flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin: 20px auto 25px auto;
+    margin: 20px auto 25px auto; */
+    max-width: 600px;
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.card h1 {
-    font-weight: 400;
-    font-size: 28px;
-}
-
-.card label {
-    font-size: 13px;
-    padding-left: 2px;
-    padding-bottom: 2px;
-    font-weight: 700;
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .card input {
@@ -55,6 +61,7 @@
     width: 288px;
     height: 31px;
     margin-top: 15px;
+    margin-bottom: 15px;
     background-color: #f0c14b;
     border: 1px solid #a6a6a6;
     border-top-color: #949494;
@@ -116,6 +123,7 @@ footer .links {
 
 footer .links a{
     font-size: 12px;
+    color: black;
 }
 
 footer::before {
@@ -132,6 +140,37 @@ footer::before {
 
 footer p {
     font-size: 11px;
-    color: #555;
+    color: #6a4949;
     text-align: center;
+}
+
+.signInH1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: black;
+    margin-right: 200px;
+    font-weight: 400;
+}
+
+.login-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-weight: 700;
+}
+
+.demoLoginBtn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 20px;
+    background-color: #FFD814;
+    color: #555555;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
