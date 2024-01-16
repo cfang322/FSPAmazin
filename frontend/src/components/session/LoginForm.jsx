@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate, NavLink } from 'react-router-dom'; // Import useNavigate
 import './LoginForm.css';
 import SignupForm from './SignUpForm';
 
@@ -46,19 +46,21 @@ function LoginForm() {
 
     return (
         <div className="login-page">
-                <div className="logo">
-                    <img src="https://pbs.twimg.com/profile_images/1722015850168037376/OiNYYeZQ_400x400.jpg" alt="Amazin Logo"/>
+                <div className="login-logo">
+                    <NavLink to="/">
+                        <img src="https://pbs.twimg.com/profile_images/1722015850168037376/OiNYYeZQ_400x400.jpg" alt="Amazin Logo"/>
+                    </NavLink>
                 </div>
                 <form className="login-form" onSubmit={handleSubmit}>
-                    <div className="card">
+                    <div className="card1">
                         <h1 className="signInH1">Sign in</h1>
-                            <label className="login-label">Email</label>
-                            <input type="text" id="email"/>
-                        <br/>
-                            <label className="login-label">Password</label>
-                            <input type="password" value={password} id="password" onChange={(e) => setPassword(e.target.value)} required/>
-                        <button onClick={handleSubmit}>Continue</button>
-                        <br/>
+                            <label className="login-label">Email
+                                <input type="text" id="email"/>
+                            </label>
+                            <label className="login-label">Password
+                                <input type="password" value={password} id="password" onChange={(e) => setPassword(e.target.value)} required/>
+                            </label>
+                        <button className="loginBtn" onClick={handleSubmit}>Continue</button>
                         <button className='demoLoginBtn' onClick={loginDemo}>Demo Log In</button>
                         <p>
                             By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
@@ -66,10 +68,10 @@ function LoginForm() {
                     </div>
                 </form>
                 <br/>
-                <div className="break">
+                <div className="break1">
                     <p>New to Amazin?</p>
                 </div>
-                <div className="btn">
+                <div className="login-page-signup-button">
                     <button onClick={handleSignupClick}>Create your Amazin account</button>
                 </div>
                 <footer>

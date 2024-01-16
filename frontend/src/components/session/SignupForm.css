@@ -1,17 +1,126 @@
-* {
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
     margin: 0px;
-    padding: 0px;
-    font-family: Arial, sans-serif;
 }
 
-.logo {
+.signup-logo {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: relative;
+    z-index: 1;
+    margin-top: 18px!important;
+}
+
+.signup-logo img {
     width: 100px;
-    margin-top: 15px;
-    margin: auto;
-    display: block;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.outer-box {
+.signup-form {
+    margin: 20px auto 20px auto; 
+    max-width: 600px;
+    width: 300px;
+    height: 500px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signUpH1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    margin-right: 122px;
+    color: black;
+    font-weight: 400;
+}
+
+.signup-label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-weight: 700;
+}
+
+.card2 input {
+    width: 280px;
+    height: 25px;
+    padding: 3px 7px;
+    margin-top: 3px;
+    background-color: #fff;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+}
+
+.card2 input:focus {
+    margin-bottom: 15px;
+    border: 1px solid #838383;
+    border-radius: 4px;
+    outline: rgba(109, 255, 255, 0.747) solid 2px;
+}
+
+.card2 p {
+    font-size: 12px;
+    line-height: 1.5
+}
+
+.signupBtn {
+    width: 100%;
+    padding: 11px;
+    background-color: #FFD814;
+    color: #555555;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.signupBtn:hover {
+    background-color: #f8d318;
+}
+
+.have-acc {
+    margin-top: 20px;
+    margin-left: 0;
+    color: #0059ff;
+    font-weight: 10;
+    font-size: 12px;
+}
+
+.divider {
+    width: 800px;
+    height: 1.5px;
+    background-color: #ddd;
+    margin: 20px 0;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.divider p {
+    font-size: 11px;
+    color: #555!important;
+    text-align: center;
+}
+
+.question {
+    margin-top: 15px;
+    margin-right: 50px;
+}
+
+/* .outer-box {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -37,7 +146,7 @@ h1 {
     font-weight: 400;
     font-size: 28px;
     margin-bottom: 10px;
-}
+} */
 
 /* .name-section {
     display: table;
@@ -47,17 +156,17 @@ h1 {
     clear: both;
 } */
 
-.form {
+/* .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 /* .email-and-number-section {
     margin-bottom: 14px!important;
 } */
 
-.form label {
+/* .form label {
     font-size: 13px;
     padding-bottom: 5px;
     font-weight: 700;
@@ -111,4 +220,4 @@ footer p {
     font-size: 11px;
     color: #555;
     text-align: center;
-}
+}  */

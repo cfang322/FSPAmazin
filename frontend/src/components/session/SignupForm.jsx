@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 import './SignupForm.css';
 
@@ -37,70 +37,72 @@ function SignupForm() {
     };
 
     return (
-        <>
-        <head>
-        <title>Amazin Signup Form</title>
-        </head>
-        <section>
-            <div className="logo">
-                <img src="https://pbs.twimg.com/profile_images/1722015850168037376/OiNYYeZQ_400x400.jpg" alt="Amazin Logo" />
+        <div className="signup-page">
+            <div className="signup-logo">
+                <NavLink to="/">
+                    <img src="https://pbs.twimg.com/profile_images/1722015850168037376/OiNYYeZQ_400x400.jpg" alt="Amazin Logo"/>
+                </NavLink>
             </div>
-            <div className="outer-box">
-                <div className="inner-box">
-                    <h1>Create account</h1>
-                    <div className="form">
-                        <ul>
-                            {errors.map(error => <li key={error}>{error}</li>)}
-                        </ul>
-                        <label>Your name
-                            <input
-                                type="text"
-                                maxLength="50"
-                                placeholder="First and last name"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                        </label>
-                        <label>Mobile number or email
-                            <input
-                                type="text"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                required
-                            />
-                        </label>
-                        <label>Password
-                            <input
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required
-                            />
-                        </label>
-                        <label>Re-enter Password
-                            <input
-                                type="password"
-                                value={confirmPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)}
-                                required
-                            />
-                        </label>
-                        <div className="btn">
-                            <button type="submit">Continue</button>
-                        </div>
-                    </div>
+
+            <form className="signup-form" onSubmit={handleSubmit}>
+                <div className="card2">
+                <ul className='errors'>
+                    <cite>{errors.map(error => <li key={error}>{error}</li>)}</cite>
+                </ul>
+                <h1 className="signUpH1">Create account</h1>
+                    <label className="signup-label">Your name
+                        <input
+                            type="text"
+                            value={username}
+                            placeholder="First and last name"
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                        />
+                    </label>
+                    <label className="signup-label">Email
+                        <input
+                            type="text"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </label>
+                    <label className="signup-label">Password
+                        <input
+                            type="password"
+                            value={password}
+                            placeholder="At least 6 characters"
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </label>
+                    <label className="signup-label">Re-enter password
+                        <input
+                            type="password"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            required
+                        />
+                    </label>
+                <br/>
+                <button className="signupBtn" onClick={handleSubmit}>Continue</button>
+                <p>
+                    By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
+                </p>
+                {/* <span className="divider"></span> */}
+                <p className='question'>Already have an account?
+                    <NavLink className='have-acc' to='/login'>Sign in</NavLink>
+                </p>
                 </div>
+            </form>
+            <div className="divider">
+                <div className="links">
+                    <a href="https://github.com/cfang322">GitHub</a>
+                    <a href="https://www.linkedin.com/in/yaqi-fang-125807250/">LinkedIn</a>
+                </div>
+                <p>© Winter 2024, Amazin.com, cloned by Yaqi Fang</p>
             </div>
-        <footer>
-            <div className="links">
-                <a href="https://github.com/cfang322">GitHub</a>
-                <a href="https://www.linkedin.com/in/yaqi-fang-125807250/">LinkedIn</a>
-            </div>
-            <p>© Winter 2024, Amazin.com, cloned by Yaqi Fang</p>
-        </footer>
-    </section>
-        </>     
+        </div>    
     );
 }
 
