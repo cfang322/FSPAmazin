@@ -44,7 +44,7 @@ function SignupForm() {
                 </NavLink>
             </div>
 
-            <form className="signup-form" onSubmit={handleSubmit}>
+            <form className="signup-form" noValidate="novalidate" onSubmit={handleSubmit}>
                 <div className="card2">
                 <ul className='errors'>
                     <cite>{errors.map(error => <li key={error}>{error}</li>)}</cite>

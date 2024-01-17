@@ -9,10 +9,10 @@ function LoginForm() {
     const sessionUser = useSelector(state => state.session.user);
     const [credential, setCredential] = useState('');
     const [password, setPassword] = useState('');
-    const [errors, setErrors] = useState('');
-
+    const [errors, setErrors] = useState([]);
+    
     const navigate = useNavigate(); // Get the navigate function
-
+    
     if (sessionUser) {
         navigate('/', { replace: true });
         return null; // or any other component you want to render when already logged in
@@ -33,16 +33,16 @@ function LoginForm() {
                 else setErrors([res.statusText]);
         });
     };
-
+    
     const handleSignupClick = () => {
         navigate('/signup'); // Navigate to the signup page
     };
-
+    
     const loginDemo = (e) => {
         e.preventDefault();
         dispatch(sessionActions.login({credential: "demo@user.io", password: "password"}));
     };
-
+    
     return (
         <div className="login-page">
                 <div className="login-logo">
@@ -50,10 +50,14 @@ function LoginForm() {
                         <img src="https://pbs.twimg.com/profile_images/1722015850168037376/OiNYYeZQ_400x400.jpg" alt="Amazin Logo"/>
                     </NavLink>
                 </div>
-                <form className="login-form" onSubmit={handleSubmit}>
+                
+                <form className="login-form" noValidate="novalidate" onSubmit={handleSubmit}>
                     <div className="card1">
+                    <ul className='errors'>
+                        <cite>{errors.map(error => <li key={error}>{error}</li>)}</cite>
+                    </ul>
                         <h1 className="signInH1">Sign in</h1>
-                            <label className="login-label">Email
+                            <label className="login-label">Username or Email
                                 <input type="text" value={credential} onChange={(e) => setCredential(e.target.value)} required/>
                             </label>
                             <label className="login-label">Password
@@ -66,6 +70,7 @@ function LoginForm() {
                         </p>
                     </div>
                 </form>
+                
                 <br/>
                 <div className="break1">
                     <p>New to Amazin?</p>
@@ -73,6 +78,7 @@ function LoginForm() {
                 <div className="login-page-signup-button">
                     <button onClick={handleSignupClick}>Create your Amazin account</button>
                 </div>
+                
                 <footer>
                     <div className="links">
                         <a href="https://github.com/cfang322">GitHub</a>

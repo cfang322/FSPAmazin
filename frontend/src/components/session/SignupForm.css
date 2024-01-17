@@ -18,6 +18,7 @@
 .signup-logo img {
     width: 100px;
     display: inline-block;
+    margin: auto;
     vertical-align: top;
 }
 
@@ -44,13 +45,27 @@
 
 .signup-label {
     display: block;
-    text-align: left;
+    text-align: start;
     margin-top: 15px;
     margin-bottom: 8px;
     font-size: 13px;
     padding-left: 2px;
     padding-bottom: 2px;
     font-weight: 700;
+
+    /* display: block;
+    text-align: start;
+    margin: 0px;
+    padding: 0px 0px 2px 2px;
+    word-spacing: 0px;
+    color: #111111;
+    font-size: 13px;
+    font-weight: 700;
+    font-stretch: 100%;
+    font-kerning: auto;
+    text-decoration: none solid rgb(17, 17, 17);
+    font-optical-sizing: auto;
+    line-height: 19px; */
 }
 
 .card2 input {
@@ -64,7 +79,7 @@
 }
 
 .card2 input:focus {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     border: 1px solid #838383;
     border-radius: 4px;
     outline: rgba(109, 255, 255, 0.747) solid 2px;
@@ -101,7 +116,7 @@
     box-shadow: 3 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card2 input {
+/* .card2 input {
     width: 280px;
     height: 25px;
     padding: 3px 7px;
@@ -109,14 +124,14 @@
     background-color: #fff;
     border: 1px solid #a6a6a6;
     border-radius: 3px;
-}
+} */
 
-.card2 input:focus {
+/* .card2 input:focus {
     margin-bottom: 15px;
     border: 1px solid #838383;
     border-radius: 4px;
     outline: rgba(109, 255, 255, 0.747) solid 2px;
-}
+} */
 
 .card2 p {
     font-size: 12px;

@@ -10,33 +10,33 @@ import './Navigation.css';
 function Navigation() {
     const sessionUser = useSelector((state) => state.session.user);
     const dispatch = useDispatch();
-
+    
     const logout = (e) => {
         e.preventDefault();
         dispatch(sessionActions.logout());
     };
-
-
-
+    
+    
+    
     const sessionLinks = sessionUser ? (
-        <>
+    <>
         <li>
             <button className='dropdwnSignoutBtn' onClick={logout}>Log Out</button>
         </li>
-        </>
+    </>
     ) : (
-        <>
+    <>
         <li className='dropdwnSign'>
             <NavLink id='dropdwnLoginBtn' to='/login'>Log in</NavLink>
         </li>
         <li>
             <NavLink id='signup' to="/signup">New costumer? Start here</NavLink>
         </li>
-        </>
+    </>
     );
-
+    
     return (
-        <>
+    <>
         <ul className='navBar'>
             <div className='home'>
             </div>
@@ -50,7 +50,7 @@ function Navigation() {
         <ul className='lowerNavBar'>
             
         </ul>
-        </>
+    </>
     );
 }
 
