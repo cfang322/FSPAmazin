@@ -41,7 +41,7 @@ ApplicationRecord.transaction do
         category: 'Electronics',
         rating: 5
     )
-
+    
     Product.create(
         name: 'Chart-Topping Novel',
         description: 'An acclaimed bestseller that captivates readers with its compelling narrative.',
@@ -49,7 +49,7 @@ ApplicationRecord.transaction do
         category: 'Books',
         rating: 4
     )
-
+    
     Product.create(
         name: '4K Smart LED TV',
         description: 'Immerse yourself in stunning visuals with our state-of-the-art 4K Smart TV.',
@@ -57,7 +57,7 @@ ApplicationRecord.transaction do
         category: 'Electronics',
         rating: 4
     )
-
+    
     Product.create(
         name: 'Culinary Masterpiece Collection',
         description: 'Explore the world of cooking with this curated collection of gourmet cookbooks.',
@@ -65,7 +65,7 @@ ApplicationRecord.transaction do
         category: 'Books',
         rating: 2
     )
-
+    
     Product.create(
         name: 'Wireless In-Ear Monitors',
         description: 'Experience unparalleled sound quality and freedom with our in-ear monitors.',
@@ -73,7 +73,7 @@ ApplicationRecord.transaction do
         category: 'Electronics',
         rating: 4
     )
-
+    
     Product.create(
         name: 'Epic Sci-Fi Trilogy',
         description: 'Embark on a thrilling journey with this captivating sci-fi trilogy.',
@@ -81,7 +81,7 @@ ApplicationRecord.transaction do
         category: 'Books',
         rating: 5
     )
-
+    
     Product.create(
         name: 'Smart Health Tracker Watch',
         description: 'Monitor your health and stay connected with our advanced smartwatch.',
@@ -89,7 +89,7 @@ ApplicationRecord.transaction do
         category: 'Electronics',
         rating: 4
     )
-
+    
     Product.create(
         name: 'Exotic Coffee Blend',
         description: 'Indulge in the rich flavors of our exotic gourmet coffee blend.',
@@ -97,7 +97,7 @@ ApplicationRecord.transaction do
         category: 'Groceries',
         rating: 4
     )
-
+    
     Product.create(
         name: 'Premium Noise-Canceling Headset',
         description: 'Immerse yourself in a world of music with our premium noise-canceling headphones.',
@@ -105,7 +105,7 @@ ApplicationRecord.transaction do
         category: 'Electronics',
         rating: 5
     )
-
+    
     Product.create(
         name: 'Twisted Mystery Novel',
         description: 'Uncover dark secrets and suspense in this gripping twisted mystery novel.',
@@ -113,7 +113,7 @@ ApplicationRecord.transaction do
         category: 'Books',
         rating: 4
     )
-
+    
     
     puts "Done!"
 end
