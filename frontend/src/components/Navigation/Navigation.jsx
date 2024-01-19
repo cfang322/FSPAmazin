@@ -71,8 +71,10 @@ function Navigation() {
             </div>
         </div>
         
-        <div className='lowerNavBar'>
-        
+        <div className='secondBar'>
+            <NavLink to="products" id="productsLink">
+                <p className='ProductIndexLink'>Shop Now</p>            
+            </NavLink>
         </div>
     </>
     );
