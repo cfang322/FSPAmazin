@@ -6,32 +6,36 @@ class API::CartItemsController < ApplicationController
         render :index
     end 
 
-
-    def create 
+    def create
         @cart_item = CartItem.new(cart_item_params)
-        if @cart_item.save 
+        if @cart_item.save
             render :show
-        else 
-            render json: @cart_item.errors.full_messages, status: :unprocessable_entity
+        else
+            render json: { errors: @cart_item.errors.full_messages }, status: :unprocessable_entity
         end
-    end 
+    end
+
     
-    def destroy 
-        @cart_item = CartItem.find(params[:id])
-        if @cart_item 
-            @cart_item.delete 
-            head :no_content 
+    def destroy
+        @cart_item = CartItem.find_by(id: params[:id])
+        if @cart_item
+            @cart_item.destroy
+            head :no_content
+        else
+            head :not_found
         end
     end 
 
-    def update 
-        @cart_item = CartItem.find(params[:id])
-        if @cart_item 
+    def update
+        @cart_item = CartItem.find_by(id: params[:id])
+        if @cart_item
             if @cart_item.update(cart_item_params)
                 render :show
-            else 
-                render json: @cart_item.errors.full_messages, status: unprocessable_entity
-            end 
+            else
+                render json: { errors: @cart_item.errors.full_messages }, status: :unprocessable_entity
+            end
+        else
+            head :not_found
         end
     end
 
