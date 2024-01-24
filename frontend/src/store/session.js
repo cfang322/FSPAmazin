@@ -1,4 +1,6 @@
 import csrfFetch from './csrf';
+// still works w/o it
+// import { fetchProducts } from './product';
 
 const SET_USER = "session/setUser";
 const REMOVE_USER = "session/removeUser";
@@ -26,6 +28,8 @@ export const restoreSession = () => async dispatch => {
     storeCSRFToken(response);
     const data = await response.json();
     dispatch(setUser(data.user));
+    // still works w/o it for some reason
+    // dispatch(fetchProducts());
     return response;
 };
 
@@ -35,7 +39,6 @@ export const login = ({ credential, password }) => async dispatch => {
             method: "POST",
             body: JSON.stringify({ credential, password })
         });
-
         // Check if the response status is ok
         if (!response.ok) {
             // Handle error status (e.g., unauthorized)
@@ -44,12 +47,13 @@ export const login = ({ credential, password }) => async dispatch => {
         }
         const data = await response.json();
         dispatch(setUser(data.user));
+        // dispatch(fetchProducts());
         return response;
-    } catch (error) {
-        // Handle any login errors
-        console.error("Login error:", error);
-        throw error; // Rethrow the error for further handling if needed
-    }
+        } catch (error) {
+            // Handle any login errors
+            console.error("Login error:", error);
+            throw error; // Rethrow the error for further handling if needed
+        }
 };
 
 export const signup = (user) => async (dispatch) => {

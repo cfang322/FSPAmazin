@@ -1,257 +1,139 @@
+import { useParams, useNavigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchProduct, selectProduct } from '../../store/product';
-import { useParams } from 'react-router-dom';
+import { createCartItem, memoizedSelectCartItems, updateCartItem } from '../../store/cartItem';
+import placeholder from '../../images/placeholder.svg';
+import git from '../../images/github.png';
+import linkedin from '../../images/linkedin.png';
+// import logo from '../../images/logo.png';
 import './ItemIndex.css';
-// import placeholder from '../../images/placeholder.svg';
-
 
 const ItemIndex = () => {
-    const dispatch = useDispatch();
-    const { productId } = useParams();
-    const product = useSelector(selectProduct(productId));
-    
-    useEffect(() => {
-        dispatch(fetchProduct(productId));
-    }, [dispatch, productId]);
-    
-    // Check if the product is not yet available on if the description is not an array
-    if (!product) {
-        return <div>Loading...</div>;
-    }
-    // Check if product. description is not an array or is empty
-    if (!Array.isArray(product.description) || product.description.length === 0) {
-        return <div>No description available</div>;
-    }
-    const parsedDescription = JSON.parse(product.description[0]);
-    console.log(product.description);
-    // const scrollToTop = () => {
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: 'smooth'
-    //     });
-    // }
-    // console.log(product.photoUrl);
-    return (
-        <div className="ItemIndexPage">
-            <div className='itemImageContainer'>
-                <img src={product.photoUrl} alt={product.name} />
+  const dispatch = useDispatch();
+  const { productId } = useParams();
+  const product = useSelector(selectProduct(productId));
+  const cartItems = useSelector(memoizedSelectCartItems);
+  const product_id = parseInt(productId);
+  const [quantity, setQuantity] = useState(1);
+  const sessionUser = useSelector(state => state.session.user);
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    dispatch(fetchProduct(productId));
+  }, [dispatch, productId]);
+  // if the product is not yet available or if the description is not an array
+  if (!product) {
+      return <div>Loading...</div>;
+  };
+  // if product.description is not an array or is empty
+  if (!Array.isArray(product.description) || product.description.length === 0) {
+      return <div>No description available</div>;
+  }
+  
+  const parsedDescription = JSON.parse(product.description[0]);
+  
+  const handleAddCartItem = async (e) => {
+    e.preventDefault();
+    if (sessionUser) {
+      const user_id = sessionUser.id;
+      const productToAdd = { quantity, product_id, user_id };
+      const existingCartItem = cartItems.find(
+        (item) => item.productId === product.id
+      );
+      if (existingCartItem) {
+        const updatedCartItem = {
+          ...existingCartItem,
+          quantity: existingCartItem.quantity + quantity
+        };
+        dispatch(updateCartItem(updatedCartItem));
+      } else {
+        dispatch(createCartItem(productToAdd));
+      };
+    } else {
+      navigate('/login');
+    };
+  };
+  
+  const handleQuantityChange = (e) => setQuantity(parseInt(e.target.value, 10));
+  
+  return (
+    <div className="ItemIndexPage">
+        <div className='itemImageContainer'>
+            {/* <img src={product.photoUrl} alt={product.name} /> */}
+        </div>
+        
+        <div className="itemContentContainer">
+            <div className='middleProductPriceDiv'>
+                <h3 className='middleProductPriceH3'>{product.name}</h3>
             </div>
-            <div className="itemContainerContent">
-                <div className='middleProductPriceDiv'>
-                    <h3 className='middleProductPriceH3'>{product.name}</h3>
-                </div>
-                <div className="middlePriceDivider"></div>
-                <div className='middleProductPriceDiv'>
-                    <p className='middleProductPriceP'>${product.price}</p>
-                </div>
-                <div>
-                    <ul className='productDetailList'>
-                        {parsedDescription.map((detail, index) => (
-                        <li className='productDetail' key={`${product.id}_${index}`}>{detail}</li>
-                        ))}
-                    </ul>
-                </div>
+            <div className="middlePriceDivider"></div>
+            <div className='middleProductPriceDiv'>
+                <p className='middleProductPriceP'>${product.price}</p>
             </div>
-            <div className='addToCartDiv'>
-                <div className='buyNowDiv'>
-                    <h3 className='buyNowH3'>Buy new:</h3>
-                </div>
-                <div className='productPriceDiv'>
-                    <h1 className='productPriceH1'>${product.price}</h1>
-                </div>
-                <div className='inStockDiv'>
-                    <h1 className='inStockH1'>In Stock</h1>
-                </div>
-                <div className='quantityDiv'>
-                    <span>Quantity: </span>
-                    <select className='quantityDropDown' name="quantity" id="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                    </select>
-                </div>
-                
-                <div className='addToCartBtnDiv'>
-                    <button className='addToCartBtn'>Add to cart</button>
-                </div>
+            <div>
+              <p className='aboutItemPTag'>About this item:</p>
+              <ul className='productDetailList'>
+                  {parsedDescription.map((detail, index) => (
+                  <li className='productDetail' key={`${product.id}_${index}`}>{detail}</li>
+                  ))}
+              </ul>
             </div>
         </div>
-    )
+        
+        <div className='addToCartDiv'>
+            <div className='buyNowDiv'>
+                <h3 className='buyNowH3'>Buy new:</h3>
+            </div>
+            <div className='productPriceDiv'>
+                <h1 className='productPriceH1'>${product.price}</h1>
+            </div>
+            <div className='inStockDiv'>
+                <h1 className='inStockH1'>In Stock</h1>
+            </div>
+            <div className='quantityDiv'>
+                <span>Quantity: </span>
+                <select 
+                  className='quantityDropDown' 
+                  name="quantity"
+                  value={quantity}
+                  onChange={handleQuantityChange}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div className='addToCartBtnDiv'>
+                <button onClick={handleAddCartItem} className='addToCartBtn'>Add to cart</button>
+            </div>
+        </div>
+        
+      <ul className='productFooter'>
+        <div className='loginLinks'>
+          <span className='loginGit'>
+            <a href="https://github.com/cfang322">
+              <img src={git} alt="git-link" />
+            </a>
+          </span>
+          <span className='loginLinkedin'>
+            <a href="https://www.linkedin.com/in/yaqi-fang-125807250/">
+              <img src={linkedin} alt="linkedin-link" />
+            </a>
+          </span>
+          <div className="backToHome">
+            <NavLink to="/">
+              <p className='loginLink'>Back to Home</p>
+            </NavLink>
+          </div>
+        </div>
+      </ul>
+    </div>
+  )
 }
 
 export default ItemIndex;
-
-
-
-
-
-
-
-
-
-
-//productIndexItem.jsx
-// const ProductIndexItem = () => {
-//     const cartItems = useSelector(memoizedSelectCartItems);
-//     const dispatch = useDispatch();
-//     const { productId } = useParams();
-//     const product_id = parseInt(productId);
-//     const [quantity, setQuantity] = useState(1);
-//     const product = useSelector(selectProduct(productId));
-//     const sessionUser = useSelector(state => state.session.user);
-  
-//     useEffect(() => {
-      
-//       dispatch(fetchProduct(productId));
-//     }, [dispatch, productId]);
-  
-//     if (!product) {
-//       return <div>Loading...</div>;
-//     }
-  
-//     if (!Array.isArray(product.description) || product.description.length === 0) {
-//       return <div>No description available</div>;
-//     }
-  
-//     const parsedDescription = JSON.parse(product.description[0]);
-  
-  
-//     const scrollToTop = () => {
-//       window.scrollTo({
-//         top: 0,
-//         behavior: 'smooth',
-//       });
-//     };
-  
-  
-//     const handleAddCartItem = async (e) => {
-//       e.preventDefault();
-//       const user_id = sessionUser.id;
-//       const productToAdd = { quantity, product_id, user_id };
-    
-//       const existingCartItem = cartItems.find(
-//         (item) => item.productId === product.id
-//       );
-    
-//       if (existingCartItem) {
-//         const updatedCartItem = {
-//           ...existingCartItem,
-//           quantity: existingCartItem.quantity + quantity,
-//         };
-  
-//         dispatch(updateCartItem(updatedCartItem));
-//       } else {
-//         dispatch(createCartItem(productToAdd));
-//       }
-//     };
-  
-//     const handleQuantityChange = (e) => {
-//       setQuantity(parseInt(e.target.value, 10));
-//     };
-//     return (
-//         <div className="productIndexItemPage">
-//           <div className='topIndexPageDivider'></div>
-//           <div className='productImageContainer'>
-//             <img src={placeholder} alt={product.name} />
-//           </div>
-//           <div className="cardContentItem">
-//             <div className='middleProductPriceDiv'>
-//               <h3 className='middleProductPriceH3'>{product.name}</h3>
-//             </div>
-//             <div className='middleRatingDiv'>
-//               <span className='ratingsNum'>{product.rating}.0 </span>
-//               <Rating rating={product.rating} />
-//               <span className='numRatings'>1 rating</span>
-//             </div>
-//             <div className="middlePriceDivider"></div>
-//             <div className='middleProductPriceDiv'>
-//               <p className='middleProductPriceP'><span className='salePrice'>-10%  </span>${product.price}</p>
-//             </div>
-//             <div className="middlePriceDivider"></div>
-//             <div>
-//               <p className='aboutItemP'>About this item:</p>
-//               <ul className='productDetailList'>
-//                 {parsedDescription.map((detail, index) => (
-//                   <li className='productDetail' key={`${product.id}_${index}`}>{detail}</li>
-//                 ))}
-//               </ul>
-              
-//             </div>
-//             </div>
-//       <div className='addToCartDiv'>
-//         <div className='buyNowDiv'>
-//           <h3 className='buyNowH3'>Buy new:</h3>
-//         </div>
-//         <div className='productPriceDiv'>
-//           <h1 className='productPriceH1'>${product.price}</h1>
-//         </div>
-//         <div className='inStockDiv'>
-//           <h1 className='inStockH1'>In Stock</h1>
-//         </div>
-//         <div className='quantityDiv'>
-//           <form></form>
-//           <span>Quantity: </span>
-//           <select 
-//             className='quantityDropDown'
-//             name="quantity"
-//             value={quantity}
-//             onChange={handleQuantityChange}
-
-//           >
-//             <option value="1">1</option>
-//             <option value="2">2</option>
-//             <option value="3">3</option>
-//             <option value="4">4</option>
-//             <option value="5">5</option>
-//             <option value="6">6</option>
-//             <option value="7">7</option>
-//           </select>
-//         </div>
-
-//         <div className='addToCartBtnDiv'>
-//           <button onClick={handleAddCartItem} className='addToCartBtn'>Add to cart</button>
-//         </div>
-        
-//       </div>
-
-
-//       <div className='reviewContainer'>
-//         <div className="reviewDivider"></div>
-//         <div className='reviewItemsDiv'>
-//           <Rating rating={product.rating} />
-//           <h1>Customer reviews</h1>
-//           <h2>Review this product</h2>
-//           <button className='writeReviewBtn'>Write a customer review</button>
-//         </div>
-//         <div className="reviewDivider2"></div>
-//         <div className="reviewDivider"></div>
-//       </div>
-//       <ul className='upperProductFooter' onClick={scrollToTop}>
-//         <p className='backToTopP'>Back to top</p>
-//       </ul>
-//       <ul className='productFooter'>
-//         <div className='loginLinks'>
-//           <span className='loginGit'>
-//             <a href="https://github.com/Dominic5591">
-//               <img src={git} alt="" />
-//             </a>
-//           </span>
-//           <span className='loginLinkedin'>
-//             <a href="https://www.linkedin.com/in/dominic-c-1076322a8/">
-//               <img src={linkedin} alt="" />
-//             </a>
-            
-//           </span>
-//           <p className='loginLinkP'>2024 QuantumShop</p>
-//         </div>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default ProductIndexItem;

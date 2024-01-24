@@ -6,14 +6,13 @@ import SignupForm from './components/session/SignupForm';
 import Navigation from './components/Navigation/Navigation';
 import * as sessionActions from './store/session';
 import ProductsIndex from './components/product/ProductsIndex';
-import ItemIndex from './components/product/ItemIndex';
+
 
 function Layout() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
   const [showNavigation, setShowNavigation] = useState(true);
   const location = useLocation();
-  // const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(sessionActions.restoreSession()).then(() => {

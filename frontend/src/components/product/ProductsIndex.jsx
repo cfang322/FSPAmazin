@@ -8,18 +8,18 @@ import placeholder from '../../images/placeholder.svg';
 function ProductsIndex() {
     const dispatch = useDispatch();
     const products = useSelector(selectProductsArray);
-
+    
     useEffect(() => {
         dispatch(fetchProducts());
     }, [dispatch]);
-
+    
     return (
         <ul className='productsIndexPage'>
             <div className="productsIndexDivider"></div>
             <div className="productsContainer">
-                {products.map((product) => (
-                    <NavLink key={product.id} to={`/products/${product.id}`}>
-                        <div key={product.id} className="productContainer">
+                {products.map((product, index) => (
+                    <NavLink key={`${product.id}_${index}`} to={`/products/${product.id}`}>
+                        <div className="productContainer">
                             <img src={placeholder} alt={product.name} />
                             <div className="containerContent">
                                 <p className='productName'>{product.name}</p>
