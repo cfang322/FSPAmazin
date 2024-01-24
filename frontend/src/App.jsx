@@ -6,7 +6,8 @@ import SignupForm from './components/session/SignupForm';
 import Navigation from './components/Navigation/Navigation';
 import * as sessionActions from './store/session';
 import ProductsIndex from './components/product/ProductsIndex';
-
+import ItemIndex from './components/product/ItemIndex';
+import CartIndex from './components/cart_items/CartIndex';
 
 function Layout() {
   const dispatch = useDispatch();
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: 'products/:productId',
         element: <ItemIndex />
+      },
+      {
+        path: "cart",
+        element: <CartIndex />,
       }
     ]
   }
