@@ -7,7 +7,7 @@ import Navigation from './components/Navigation/Navigation';
 import * as sessionActions from './store/session';
 import ProductsIndex from './components/product/ProductsIndex';
 import ItemIndex from './components/product/ItemIndex';
-import CartIndex from './components/cart_items/CartIndex';
+import CartIndex from './components/cart/CartIndex';
 
 function Layout() {
   const dispatch = useDispatch();

@@ -2,7 +2,7 @@ import { useParams, useNavigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { fetchProduct, selectProduct } from '../../store/product';
-import { createCartItem, memoizedSelectCartItems, updateCartItem } from '../../store/cartItem';
+import { createCartItem, memoizedSelectCartItems, updateCartItem } from '../../store/cartItems';
 import placeholder from '../../images/placeholder.svg';
 import git from '../../images/github.png';
 import linkedin from '../../images/linkedin.png';

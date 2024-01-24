@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import { memoizedSelectCartItems } from '../../store/cartItems';
 import './Navigation.css';
 import github from '../../images/github.png';
 import linkedin from '../../images/linkedin.png';
@@ -10,13 +11,13 @@ import cart from '../../images/cart.png';
 function Navigation() {
     const sessionUser = useSelector((state) => state.session.user);
     const dispatch = useDispatch();
+    const cartItems = useSelector(memoizedSelectCartItems);
     
     const logout = (e) => {
         e.preventDefault();
         dispatch(sessionActions.logout());
     };
-    
-    
+    const totalCount = cartItems.reduce((total, item) => total + item.quantity, 0);
     
     const sessionLinks = sessionUser ? (
     <ul>
@@ -64,7 +65,7 @@ function Navigation() {
             
             <div className='cart'>
                 <NavLink to="" id="cartLink">
-                    <p className='cartNumber'>0</p>
+                    <p className='cartNumber'>{totalCount}</p>
                     <img src={cart} alt="cart-img"/>
                     <p className="cartWord">Cart</p>
                 </NavLink>

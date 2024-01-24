@@ -180,7 +180,8 @@ require "open-uri"
         price: 22.99,
         category: 'Books',
         rating: 4
-      # Product 9
+    )
+    # Product 9
     Product.create(
         name: 'Smart Home Robot Vacuum Cleaner - Effortless Cleaning for Modern Living Spaces',
         description: [
@@ -200,22 +201,20 @@ require "open-uri"
     )
     # Product 10
     Product.create(
-      name: 'Organic Herbal Tea Set - Relax and Unwind with a Variety of Natural Infusions',
-      description: [
-          'Indulge in the soothing experience of our Organic Herbal Tea Set.',
-          'A curated selection of organic herbal teas for relaxation and wellness.',
-          'Rich flavors and aromas from natural and premium ingredients.',
-          'Caffeine-free blends for a calming and stress-relieving experience.',
-          'Includes a variety of herbal infusions with unique health benefits.',
-          'Packaged in eco-friendly and biodegradable materials.',
-          'Perfect for tea enthusiasts and those seeking a mindful tea-drinking ritual.',
-          'Discover new flavors and embrace the tranquility of herbal tea.',
-          'A thoughtful gift for tea lovers and self-care enthusiasts.'
-      ],
-      price: 19.99,
-      category: 'Groceries',
-      rating: 5
+        name: 'Organic Herbal Tea Set - Relax and Unwind with a Variety of Natural Infusions',
+        description: [
+            'Indulge in the soothing experience of our Organic Herbal Tea Set.',
+            'A curated selection of organic herbal teas for relaxation and wellness.',
+            'Rich flavors and aromas from natural and premium ingredients.',
+            'Caffeine-free blends for a calming and stress-relieving experience.',
+            'Includes a variety of herbal infusions with unique health benefits.',
+            'Packaged in eco-friendly and biodegradable materials.',
+            'Perfect for tea enthusiasts and those seeking a mindful tea-drinking ritual.',
+            'Discover new flavors and embrace the tranquility of herbal tea.',
+            'A thoughtful gift for tea lovers and self-care enthusiasts.'
+        ],
+        price: 19.99,
+        category: 'Groceries',
+        rating: 5
     )
-)
     puts "Done!"
-end

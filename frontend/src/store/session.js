@@ -1,5 +1,5 @@
 import csrfFetch from './csrf';
-import { fetchCart } from './cartItem';
+import { fetchCart } from './cartItems';
 // still works w/o it
 // import { fetchProducts } from './product';
 
