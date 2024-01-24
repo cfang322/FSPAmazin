@@ -233,7 +233,7 @@ require "open-uri"
         category: 'Groceries',
         rating: 4
         )
-        
+           
         Product.create(
         name: 'Wireless Noise-Canceling Headphones',
         description: [
