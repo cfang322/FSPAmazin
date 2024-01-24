@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
-import { memoizedSelectCartItems } from '../../store/cartItems';
+import { memoizedSelectCartItems } from '../../store/cartItem';
 import './Navigation.css';
 import github from '../../images/github.png';
 import linkedin from '../../images/linkedin.png';
@@ -64,7 +64,7 @@ function Navigation() {
             </li>
             
             <div className='cart'>
-                <NavLink to="" id="cartLink">
+                <NavLink to="cart" id="cartLink">
                     <p className='cartNumber'>{totalCount}</p>
                     <img src={cart} alt="cart-img"/>
                     <p className="cartWord">Cart</p>

@@ -1,11 +1,11 @@
-class API::CartItemsController < ApplicationController
+class Api::CartItemsController < ApplicationController
     wrap_parameters include: CartItem.attribute_names + ['quantity', 'userId', 'productId']
-
+    
     def index 
         @cart_items = current_user.cart_items 
         render :index
     end 
-
+    
     def create
         @cart_item = CartItem.new(cart_item_params)
         if @cart_item.save
@@ -14,7 +14,6 @@ class API::CartItemsController < ApplicationController
             render json: { errors: @cart_item.errors.full_messages }, status: :unprocessable_entity
         end
     end
-
     
     def destroy
         @cart_item = CartItem.find_by(id: params[:id])
@@ -25,7 +24,7 @@ class API::CartItemsController < ApplicationController
             head :not_found
         end
     end 
-
+    
     def update
         @cart_item = CartItem.find_by(id: params[:id])
         if @cart_item
@@ -38,8 +37,8 @@ class API::CartItemsController < ApplicationController
             head :not_found
         end
     end
-
+    
     def cart_item_params 
         params.require(:cart_item).permit(:id, :quantity, :user_id, :product_id)
     end
-end  
+end

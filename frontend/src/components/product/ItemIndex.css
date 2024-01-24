@@ -1,47 +1,37 @@
-.ItemIndexPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 1400px;
-    width: 100%;
-    border: 1px solid black;
-    padding-top: 200px;
+.itemIndexPage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 1000px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
-.ItemImageContainer {
-    position: relative;
-    top: 10%;
-    right: 30%;
+.itemImageContainer {
+  width: 30%;
+  margin-right: 10px;
 }
 
-.itemContentContainer {
-    position: relative;
-    width: 30%;
-    margin-left: 50px;
-    height: 3000px;
-    bottom: 10%;
-}
-
-.addToCartDiv {
-  border: 1px solid rgb(170, 170, 170);
-  border-radius: 10px;
-  display: block;
-  position: relative;
+.itemContentContainer{
+  width: 30%;
   margin-right: 100px;
-  margin-top: 100px;
-  width: 200px;
-  height: 350px;
-  left: 38%;
-  bottom: 47%;
+}
+
+.addToCartContainer {
+  border: 1px solid rgb(155, 175, 174);
+  border-radius: 10px;
+  width: 30%;
   padding: 12px;
+  height: auto
 }
 
-
-.buyNowDiv {
-  padding-bottom: 5px
-}
-.buyNowH3 {
+.buyNew {
+  padding-bottom: 5px;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -51,42 +41,39 @@
   text-transform: none;
 }
 
-.productPriceDiv {
+.productPriceContainer {
   padding-bottom: 30px;
 }
 
-.productPriceH1 {
+.productPriceText {
   font-size: 28px;
   text-decoration: none;
   font-weight: lighter;
   color: #0F1111;
 }
 
-.inStockDiv {
+.inStockContainer {
   padding-bottom: 40px;
 }
 
-
-.inStockH1 {
+.inStockText {
   color: #007600;
   font-size: 18px;
   line-height: 24px;
 }
 
-
-.quantityDiv {
+.quantityContainer {
   padding-bottom: 12px;
 }
 
 .quantityDropDown {
   width: 60px;
-  background-color: #F0F2F2;
+  background-color: #eceeee;
   border-radius: 10px;
 }
 
-
 .quantityDropDown:focus {
-  border: 1px solid #838383;
+  border: 1px solid #818181;
   border-radius: 4px;
   outline: rgba(109, 255, 255, 0.747) solid 2px;
 }
@@ -106,41 +93,30 @@
   margin-bottom: 10px;
 }
 
-.addToCartBtnDiv {
-  padding-top: 120px;
+.addToCartButton {
+  width: 100%;
+  height: 33px;
+  padding: 1px 6px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.addToCartBtn:hover {
-  background-color: #f8d318;
+.addToCartButton:hover {
+  background-color: #ceb01e;
 }
 
-
-.middleProductPriceDiv {
+.middleProductPriceContainer {
   display: flex;
   align-items: center;
 }
 
-.middleProductPriceH3 {
+.middleProductPriceText {
   font-size: 26px;
   line-height: 32px;
 }
 
-.middleRatingDiv {
-  padding-top: 10px;
-}
-
-.ratingsNum {
-  margin-top: 9px;
-  padding-right: 5px;
-}
-
-.numRatings {
-  margin-top: 9px;
-  padding-left: 25px;
-  color: #68ABB7
-}
-
-.middlePriceDivider {
+.middleDivider {
   width: 100%;
   height: 0.5px;
   background-color: #5a5a5a;
@@ -149,10 +125,9 @@
   box-shadow:  1px 4px 8px  #ffffff;
 }
 
-.middleProductPriceP {
+.middleProductPriceText {
   font-size: 24px;
 }
-
 
 .productDetailList {
   display: block;
@@ -164,12 +139,11 @@
   padding-inline-start: 40px;
 }
 
-
 .upperProductFooter {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #37475A;
+  background-color: #374658;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,15 +151,9 @@
   height: 60%;
 }
 
-
-
 .upperProductFooter:hover {
 background-color: #4b5968;
-}
-
-
-.backToTopP {
-  color: white;
+color: rgb(77, 90, 103);
 }
 
 .productFooter {
@@ -200,344 +168,14 @@ background-color: #4b5968;
   height: 100%;
 }
 
+.loginGit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-
-/* .scrollToTopBtn:hover {
-  background-color: #f8d318;
-}   */
-/* .addToCartDiv {
-    border: 1px solid rgb(170, 170, 170);
-    border-radius: 10px;
-    display: block;
-    position: relative;
-    margin-right: 100px;
-    margin-top: 100px;
-    width: 200px;
-    height: 350px;
-    left: 38%;
-    bottom: 47%;
-    padding: 12px;
-  }
-  
-  
-  .buyNowDiv {
-    padding-bottom: 5px
-  }
-  .buyNowH3 {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-    text-decoration: none solid rgb(15, 17, 17);
-    color:#0F1111;
-    font-stretch: 100%;
-    text-transform: none;
-  }
-  
-  .productPriceDiv {
-    padding-bottom: 30px;
-  }
-  
-  .productPriceH1 {
-    font-size: 28px;
-    text-decoration: none;
-    font-weight: lighter;
-    color: #0F1111;
-  }
-  
-  .inStockDiv {
-    padding-bottom: 40px;
-  }
-  
-  
-  .inStockH1 {
-    color: #007600;
-    font-size: 18px;
-    line-height: 24px;
-  }
-  
-  
-  .quantityDiv {
-    padding-bottom: 12px;
-  }
-  
-  .quantityDropDown {
-    width: 60px;
-    background-color: #F0F2F2;
-    border-radius: 10px;
-  }
-  
-  
-  .quantityDropDown:focus {
-    border: 1px solid #838383;
-    border-radius: 4px;
-    outline: rgba(109, 255, 255, 0.747) solid 2px;
-  }
-  
-  .addToCartBtn {
-    width: 100%;
-    height: 33px;
-    padding: 1px 6px;
-    background-color: #FFD814;
-    color: #464646;
-    font-weight: 400;
-    text-align: center;
-    line-height: 19px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  .addToCartBtnDiv {
-    padding-top: 120px;
-  }
-  
-  .addToCartBtn:hover {
-    background-color: #f8d318;
-  }
-  
-  
-  .middleProductPriceDiv {
-    display: flex;
-    align-items: center;
-  }
-  
-  .middleProductPriceH3 {
-    font-size: 26px;
-    line-height: 32px;
-  }
-  
-  .middleRatingDiv {
-    padding-top: 10px;
-  }
-  
-  .ratingsNum {
-    margin-top: 9px;
-    padding-right: 5px;
-  }
-  
-  .numRatings {
-    margin-top: 9px;
-    padding-left: 25px;
-    color: #68ABB7
-  }
-  
-  .middlePriceDivider {
-    width: 100%;
-    height: 0.5px;
-    background-color: #5a5a5a;
-    margin: 30px 0;
-    background: linear-gradient(to right, rgb(184, 184, 184), rgb(184, 184, 184), rgb(184, 184, 184));
-    box-shadow:  1px 4px 8px  #ffffff;
-  }
-  
-  .middleProductPriceP {
-    font-size: 24px;
-  }
-  
-  
-  .productDetailList {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-  }
-  
-  
-  .upperProductFooter {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #37475A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60%;
-  }
-  
-  
-  
-  .upperProductFooter:hover {
-  background-color: #4b5968;
-  }
-  
-  
-  .backToTopP {
-    color: white;
-  }
-  
-  .productFooter {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #232F3E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  
-  
-  .scrollToTopBtn:hover {
-    background-color: #f8d318;
-  } */
-  
-  /* .ratingsNum {
-    margin-top: 9px;
-    padding-right: 5px;
-  }
-  
-  .numRatings {
-    margin-top: 9px;
-    padding-left: 25px;
-    color: #68ABB7
-  }
-  
-  .middlePriceDivider {
-    width: 100%;
-    height: 1px;
-    background-color: #5a5a5a;
-    margin: 30px 0;
-    background: linear-gradient(to right, rgb(184, 184, 184), rgb(184, 184, 184), rgb(184, 184, 184));
-    box-shadow:  1px 4px 8px  #ffffff;
-  }
-  
-  .middleProductPriceP {
-    font-size: 24px;
-  }
-  
-  
-  .productDetailList {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    
-  }
-  
-  .productDetail {
-    padding: 4px;
-  }
-  
-  
-  .salePrice {
-    color: rgb(255, 112, 112);
-    font-weight: lighter;
-    font-size: 25px;
-    padding-right: 4px;
-    font-family: Amazon Ember Lite;
-  }
-  
-  
-  .aboutItemP {
-    font-weight: bold;
-  }
-  
-  .upperProductFooter {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #37475A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 20%;
-  }
-  
-  
-  
-  .upperProductFooter:hover {
-  background-color: #4b5968;
-  }
-  
-  
-  .backToTopP {
-    color: white;
-    font-size: 13px;
-    font-family: Amazon Ember Lite;
-  }
-  
-  .productFooter {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #232F3E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .scrollToTopBtn:hover {
-    background-color: #f8d318;
-  }
-  
-  
-  .reviewDivider {
-    width: 100%;
-    height: 0.5px;
-    margin: 30px 0;
-    background: linear-gradient(to right,#d1d1d1, #d1d1d1, #d1d1d1);
-    box-shadow:  1px 4px 8px  #ffffff;
-  }
-  .reviewDivider2 {
-    width: 100%;
-    height: 0.5px;
-    margin-top: 30px;
-  }
-  
-  .reviewContainer {
-    width: 100%;
-    display: block;
-    justify-content: center;
-  }
-  
-  
-  .reviewItemsDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .writeReviewBtn {
-    width: 30%;
-    padding: 12px;
-    background-color: #ffffff;
-    color: #464646;
-    font-weight: bold;
-    border: 1px solid #d3d2d2;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  
-  }
-  
-  .writeReviewBtn:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .topIndexPageDivider {
-    position: relative;
-    top: 3%;
-    width: 100%;
-    height: 3.5px;
-    background: linear-gradient(to right,#d3d3d3, #d3d3d3, #d3d3d3);
-    box-shadow:  1px 2px 10px  #858585;
-  }
-  
-  
-  .loginLinkP {
-    font-family: Amazon Ember Lite;
-  }  */
+.loginLinkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

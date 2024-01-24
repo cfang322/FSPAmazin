@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :cart_items, foreign_key: :user_id, class_name: :CartItem, dependent: :destroy
+
   validates :username, 
     uniqueness: true, 
     length: { in: 3..40 }, 
