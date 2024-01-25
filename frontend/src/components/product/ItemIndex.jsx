@@ -1,11 +1,11 @@
-import { useParams, useNavigate, NavLink } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchProduct, selectProduct } from "../../store/product";
 import { createCartItem, memoizedSelectCartItems, updateCartItem } from "../../store/cartItem";
 import placeholder from "../../images/placeholder.svg";
-import git from "../../images/github.png";
-import linkedin from "../../images/linkedin.png";
+// import git from "../../images/github.png";
+// import linkedin from "../../images/linkedin.png";
 import "./ItemIndex.css";
 
 const ItemIndex = () => {
@@ -59,8 +59,8 @@ const ItemIndex = () => {
   return (
     <div className="itemIndexPage">
       <div className="itemImageContainer">
-        {/* <img src={product.photoUrl} alt={product.name} /> */}
-        <img src={placeholder} alt={product.name} />
+        <img src={product.photoUrl} alt={product.name} />
+        {/* <img src={placeholder} alt={product.name} /> */}
       </div>
       <div className="itemContentContainer">
         <div className="middleProductPriceContainer">

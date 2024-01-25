@@ -1,0 +1,193 @@
+.CartPageDiv {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #EAEDED;
+    }
+    
+    .CartIndexUl {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    width: 100%;
+    }
+    
+    .cartIndexLi {
+    display: flex;
+    flex-direction: column;
+    padding-left: 35px;
+    height: 300px;
+    width: 100%;
+    background-color: #EAEDED;
+    }
+    
+    .checkoutSideDiv {
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 50px;
+    right: 50px;
+    width: 300px;
+    height: 250px;
+    background-color: #FFFFFF;
+    }
+    
+    .checkoutBtn {
+    margin-top: 30px;
+    padding: 10px;
+    width: 80%;
+    background-color: #FFD814;
+    color: #555555;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    .checkoutBtn:hover {
+    background-color: #f8d318;
+    }
+    
+    .freeShip {
+    color: green;
+    font-size: 14px;
+    padding: 16px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+    }
+    
+    .amount {
+    font-weight: 700;
+    font-family: Amazon Ember Lite;
+    }
+    
+    .addMoreItems {
+    color: rgb(124, 126, 124);
+    font-size: 14px;
+    padding: 12px;
+    padding-bottom: 40px;
+    padding-left: 35px;
+    }
+    
+    .giftOrderLabel {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Amazon Ember Lite;
+    margin-right: 60px;
+    padding-top: 15px;
+    color: #252525;
+    }
+    
+    .giftRadio {
+    position: relative;
+    top: 2px;
+    }
+    
+    .totalPriceP {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Amazon Ember Lite;
+    margin-right: 50px;
+    color: #252525;
+    }
+    
+    .upperCartFooter {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #37475A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3%;
+    }
+    
+    .cartFooter {
+    z-index: 2;
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    background-color: #232F3E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    }
+    
+    .emptyCartDiv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 500px;
+    bottom: 300px;
+    gap: 30px;
+    }
+    
+    .cartSessionBtns {
+    display: flex;
+    flex-direction: row;
+    }
+    
+    .cartImgDiv {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    margin-bottom: 90px;
+    }
+    
+    .emptyCartH1 {
+    font-size: 30px;
+    margin-bottom: 14px;
+    /* font-weight: bold; */
+    }
+    
+    .emptyCartP {
+    cursor: pointer;
+    color: #007185;
+    }
+    
+    .emptyCartBtnSignIn {
+    /* margin-top: 40px; */
+    padding: 10px;
+    width: 100%;
+    margin-left: 20px;
+    background-color: #FFD814;
+    color: #555555;
+    position: relative;
+    right: 20%;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+    
+    .emptyCartBtnSignIn:hover {
+    background-color: #f8d318;
+    }
+    
+    .emptyCartBtnSignUp {
+    /* margin-top: 40px; */
+    padding: 10px;
+    width: 100%;
+    margin-left: 20px;
+    background-color: #f3f3f3;
+    color: #555555;
+    position: relative;
+    right: 20%;
+    font-weight: bold;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    cursor: pointer;
+    }
+    
+    .emptyCartBtnSignUp:hover {
+    background-color: #EAEDED;
+    }
