@@ -8,6 +8,7 @@ import * as sessionActions from './store/session';
 import ProductsIndex from './components/product/ProductsIndex';
 import ItemIndex from './components/product/ItemIndex';
 import CartIndex from './components/cart/CartIndex';
+import HomePage from './components/homepage/HomePage';
 
 function Layout() {
   const dispatch = useDispatch();
@@ -39,12 +40,12 @@ function Layout() {
 
 const router = createBrowserRouter([
   {
-    // path: '/',
+    path: '/',
     element: <Layout />,
     children: [
       {
         path: '/',
-        element: <h1>Welcome!</h1>
+        element: <HomePage />
       },
       {
         path: 'login',

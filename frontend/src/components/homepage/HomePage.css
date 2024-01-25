@@ -1,0 +1,13 @@
+#bannerDiv {
+    height: 600px;
+    position: absolute;
+    top: 95px;
+    width: 1500px;
+    z-index: 2;
+}
+
+.bannerImg {
+    height: 100%;
+    width: 100%;
+}
+
