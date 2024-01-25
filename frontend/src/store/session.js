@@ -29,34 +29,22 @@ export const restoreSession = () => async dispatch => {
     storeCSRFToken(response);
     const data = await response.json();
     dispatch(setUser(data.user));
-    dispatch(fetchCart());
+    // dispatch(fetchCart());
     // still works w/o it for some reason
     // dispatch(fetchProducts());
     return response;
 };
 
 export const login = ({ credential, password }) => async dispatch => {
-    try {
-        const response = await csrfFetch("/api/session", {
-            method: "POST",
-            body: JSON.stringify({ credential, password })
-        });
-        // Check if the response status is ok
-        if (!response.ok) {
-            // Handle error status (e.g., unauthorized)
-            const errorData = await response.json();
-            throw errorData;
-        }
-        const data = await response.json();
-        dispatch(setUser(data.user));
-        dispatch(fetchCart());
-        // dispatch(fetchProducts());
-        return response;
-        } catch (error) {
-            // Handle any login errors
-            console.error("Login error:", error);
-            throw error; // Rethrow the error for further handling if needed
-        }
+    const response = await csrfFetch("/api/session", {
+        method: "POST",
+        body: JSON.stringify({ credential, password }),
+    });
+    const data = await response.json();
+    dispatch(setUser(data.user));
+    dispatch(fetchProducts());
+    dispatch(fetchCart());
+    return response;
 };
 
 export const signup = (user) => async (dispatch) => {

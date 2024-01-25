@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, NavLink } from 'react-router-dom'; // Import useNavigate
+import { useNavigate, NavLink, Navigate } from 'react-router-dom'; // Import useNavigate
 import './LoginForm.css';
 
 function LoginForm() {
@@ -13,10 +13,9 @@ function LoginForm() {
     
     const navigate = useNavigate(); // Get the navigate function
     
-    if (sessionUser) {
-        navigate('/', { replace: true });
-        return null; // or any other component you want to render when already logged in
-    }
+    if (sessionUser) 
+        return <Navigate to="/" replace={true} />;
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
@@ -54,7 +53,7 @@ function LoginForm() {
                 <form className="login-form" noValidate="novalidate" onSubmit={handleSubmit}>
                     <div className="card1">
                     <ul className='errors'>
-                        <cite>{errors.map(error => <li key={error}>{error}</li>)}</cite>
+                        {errors.map(error => <li key={error}>{error}</li>)}
                     </ul>
                         <h1 className="signInH1">Sign in</h1>
                             <label className="login-label">Username or Email

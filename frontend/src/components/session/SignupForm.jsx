@@ -15,25 +15,41 @@ function SignupForm() {
 
     if (sessionUser) return <Navigate to="/" replace={true}/>;
 
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     if (password === confirmPassword) {
+    //     setErrors([]);
+    //     return dispatch(sessionActions.signup({ email, username, password }))
+    //         .catch(async (res) => {
+    //         let data;
+    //         try {
+    //             // .clone() essentially allows you to read the response body twice
+    //             data = await res.clone().json();
+    //         } catch {
+    //             data = await res.text(); // Will hit this case if the server is down
+    //         }
+    //         if (data?.errors) setErrors(data.errors);
+    //         else if (data) setErrors([data]);
+    //         else setErrors([res.statusText]);
+    //         });
+    //     }
+    //     return setErrors(['Confirm Password field must be the same as the Password field']);
+    // };
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (password === confirmPassword) {
         setErrors([]);
-        return dispatch(sessionActions.signup({ email, username, password }))
+        return dispatch(sessionActions.login({ email, username, password }))
             .catch(async (res) => {
-            let data;
-            try {
-                // .clone() essentially allows you to read the response body twice
+                let data;
+                try {
                 data = await res.clone().json();
-            } catch {
-                data = await res.text(); // Will hit this case if the server is down
-            }
-            if (data?.errors) setErrors(data.errors);
-            else if (data) setErrors([data]);
-            else setErrors([res.statusText]);
+                } catch {
+                data = await res.text();
+                }
+                if (data?.errors) setErrors(data.errors);
+                else if (data) setErrors([data]);
+                else setErrors([res.statusText]);
             });
-        }
-        return setErrors(['Confirm Password field must be the same as the Password field']);
     };
 
     return (
@@ -43,11 +59,11 @@ function SignupForm() {
                     <img src="https://pbs.twimg.com/profile_images/1722015850168037376/OiNYYeZQ_400x400.jpg" alt="Amazin Logo"/>
                 </NavLink>
             </div>
-
+            
             <form className="signup-form" noValidate="novalidate" onSubmit={handleSubmit}>
                 <div className="card2">
                 <ul className='errors'>
-                    <cite>{errors.map(error => <li key={error}>{error}</li>)}</cite>
+                    {errors.map(error => <li key={error}>{error}</li>)}
                 </ul>
                 <h1 className="signUpH1">Create account</h1>
                     <label className="signup-label">Your name
@@ -85,7 +101,7 @@ function SignupForm() {
                         />
                     </label>
                 <br/>
-                <button className="signupBtn" onClick={handleSubmit}>Continue</button>
+                <button type="submit" className="signupBtn">Continue</button>
                 <p>
                     By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
                 </p>

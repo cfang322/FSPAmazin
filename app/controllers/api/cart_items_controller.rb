@@ -1,19 +1,20 @@
 class Api::CartItemsController < ApplicationController
     wrap_parameters include: CartItem.attribute_names + ['quantity', 'userId', 'productId']
+    before_action :require_logged_in, only: [:index]
     
     def index 
-        if current_user
+        # if current_user
             @cart_items = current_user.cart_items
             
-            if @cart_items.present?
-                render :index
-            else
-                render json: { cart_items: [] }
-            end
+            # if @cart_items.present?
+            #     render :index
+            # else
+            #     render json: { cart_items: [] }
+            # end
             
-        else
-            render json: { error: 'User Not Found' }, status: :unprocessable_entity
-        end
+        # else
+        #     render json: { error: 'User Not Found' }, status: :unprocessable_entity
+        # end
     end 
     
     def create
