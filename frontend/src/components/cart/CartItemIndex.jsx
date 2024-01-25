@@ -31,7 +31,7 @@ const CartItemIndex = ({ cartItem }) => {
     };
     
     return (
-        <div className="cartIndexItem">
+        <div className="cartItemIndex">
         <div className="cartItem" key={cartItem.id}>
             <NavLink to={`/products/${product.id}`}>
                 <div className="cartItemImgDiv">
