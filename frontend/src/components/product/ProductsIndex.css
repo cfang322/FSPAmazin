@@ -27,6 +27,10 @@
     height: 350px;
 }
 
+.productImage {
+    width: 200px;
+}
+
 .containerContent {
     margin-top: 30px;
     border-radius: 10px;

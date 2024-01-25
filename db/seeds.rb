@@ -206,324 +206,326 @@ require "open-uri"
     
 # --------------- #
     #Product 1 - Beauty
-    # beauty1 = Product.create(
-    #     name: 'Beauty of Joseon Glow Serum Propolis and Niacinamide. Hydrating Facial Moisturizer for Sensitive Skin, Acne, Uneven Skin Tone. Korean Skincare 30ml, 1 fl.oz',
-    #     description: [
-    #         'Soothe & Calm: The rich Propolis content gently eases red spots, promoting a balanced, even appearance.',
-    #         'Oil Control, Moisture Balance: Niacinamide & 0.5% BHA expertly manage sebum, and high-concentration Propolis Extract minimizes pores, unveiling a luminous, refined complexion.',
-    #         'All-Day Hydration: Our unique blend ensures consistent hydration, leaving your skin with a captivating, radiant glow.',
-    #         'Honey-like texture: It has viscosity like honey, and leaves a subtle glow of moisture, but is not oily or sticky.',
-    #         'Formula for Glowing Skin: Infused with 60% Propolis Extract & 2% Niacinamide, reduces pores & calms the skin, revealing clear skin.',
-    #         'For Every Skin Type: Our tailored transformative formula is designed to cater to oily, combination, & sensitive skin alike.'
-    #     ],
-    #     price: 17.00,
-    #     category: 'Beauty',
-    #     rating: 4
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
-
-    # #Product 2 - Beauty
-    # beauty2 = Product.create(
-    #     name: '8 Pieces Triangle Powder Puff Face Soft Triangle Makeup Puff Velour Cosmetic Foundation Blender Sponge Beauty Makeup Tools',
-    #     description: [
-    #         'Diameter: 2.87inch X 2.7inch 0.6inch thickness.',
-    #         'Velour facial powder puff, makeup puff, body puff',
-    #         'Professional makeup tool, set of 8',
-    #         'For use on face & body, for liquid foundation, immerse the puff in water and squeeze dry before use'
-    #     ],
-    #     price: 3.99,
-    #     category: 'Beauty',
-    #     rating: 3
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    beauty1 = Product.create(
+        name: 'Beauty of Joseon Glow Serum Propolis and Niacinamide. Hydrating Facial Moisturizer for Sensitive Skin, Acne, Uneven Skin Tone. Korean Skincare 30ml, 1 fl.oz',
+        description: [
+            'Soothe & Calm: The rich Propolis content gently eases red spots, promoting a balanced, even appearance.',
+            'Oil Control, Moisture Balance: Niacinamide & 0.5% BHA expertly manage sebum, and high-concentration Propolis Extract minimizes pores, unveiling a luminous, refined complexion.',
+            'All-Day Hydration: Our unique blend ensures consistent hydration, leaving your skin with a captivating, radiant glow.',
+            'Honey-like texture: It has viscosity like honey, and leaves a subtle glow of moisture, but is not oily or sticky.',
+            'Formula for Glowing Skin: Infused with 60% Propolis Extract & 2% Niacinamide, reduces pores & calms the skin, revealing clear skin.',
+            'For Every Skin Type: Our tailored transformative formula is designed to cater to oily, combination, & sensitive skin alike.'
+        ],
+        price: 17.00,
+        category: 'Beauty',
+        rating: 4
+    )
+    beauty1.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/beauty-of-joseon-serum.jpg'), filename: 'beauty-of-joseon-serum.jpg')
     
-    # #Product 3 - Beauty
-    # beauty3 = Product.create(
-    #     name: 'goop Beauty Eye Masks for Puffy Eyes | Under Eye Patches for Dark Circles | VEOCEL Lyocell Masks in Niacinamid Serum | Improves Crows Feet, Fine Lines, & Wrinkles | Paraben & Silicone Free | 30-Pack',
-    #     description: [
-    #         'Eye Masks for Dark Circles and Puffiness: This daily puffy eyes treatment delivers firming, brightening, moisture-boosting benefits to wake up your eyes—and refresh your whole look.',
-    #         'Highly Active Ingredients: The under eye patches are made of sustainably sourced VEOCEL Lyocell fibers, then soaked in a concentrated milky eye serum infused with ingredients like honey locust seed extract, olive leaf stem cells, and niacinamide.',
-    #         'Clean Skin Care: This cooling eye mask is formulated without parabens, petroleum, phthalates, SLS, SLES, PEGs, TEA, DEA, silicones, or artificial dyes or fragrances. And our formulas are not tested on animals.',
-    #         'How to Use: These under eye mask patches are easy to put on and designed not to slip—leave them on for 10 minutes to visibly improve the look of puffiness, dark circles, crows-feet, lax skin, wrinkles, and more.',
-    #         'Clinical Results: After one week of daily use (7 applications): 97% said their eye area appeared more rested, 97% said their eye area felt hydrated, 97% said their eye area looked refreshed, 97% said their eye area felt soothed and depuffed.'
-    #     ],
-    #     price: 125.00,
-    #     category: 'Beauty',
-    #     rating: 4
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 2 - Beauty
+    beauty2 = Product.create(
+        name: '8 Pieces Triangle Powder Puff Face Soft Triangle Makeup Puff Velour Cosmetic Foundation Blender Sponge Beauty Makeup Tools',
+        description: [
+            'Diameter: 2.87inch X 2.7inch 0.6inch thickness.',
+            'Velour facial powder puff, makeup puff, body puff',
+            'Professional makeup tool, set of 8',
+            'For use on face & body, for liquid foundation, immerse the puff in water and squeeze dry before use'
+        ],
+        price: 3.99,
+        category: 'Beauty',
+        rating: 3
+    )
+    beauty2.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/triangle-sponge.jpg'), filename: 'triangle-sponge.jpg')
     
-    # #Product 4 - Beauty
-    # beauty4 = Product.create(
-    #     name: 'ROLOVE Makeup Mirror with Lights,10"x12" Lighted Vanity Mirror, Dimmable Touch Screen, Cosmetic Makeup Mirrors with Stand, Smart Touch Control, Lighted Up Mirrors for Makeup Desk and Bedroom',
-    #     description: [
-    #         '【Perfect Size】 Indulge in the luxurious experience of our lighted makeup mirror, meticulously crafted with the ideal size of 10" x 12". Immerse yourself in a world of beauty as this perfectly proportioned mirror unveils a flawless view of your face.',
-    #         '【Sturdy Stand and 360°Rotation】 Our light up mirror for desk features a robust U-shaped stand that provides stability and support. It ensures the mirror stays securely in place while you&aposre using it. Additionally, the 360-degree rotation capability allows you to position the mirror at any angle you desire, making it convenient to use from various positions.',
-    #         '【Smart Dimming】 Get the perfect lighting for your makeup with our smart dimming feature. Adjust the brightness from dim to bright with just a button. Our LED lights also come with eye protection to keep your eyes safe even with the increased light.',
-    #         '【Memorable Gift】 Looking for a thoughtful gift for a makeup lover? Look no further. Our lighted vanity makeup mirror with its compact size, adjustable lighting, sturdy stand, and intelligent dimming function is an excellent choice. It combines practicality and style, making it the ideal gift for birthdays, holidays, or any special occasion.',
-    #         '【Premium Service】 We stand behind the quality of our product and offer premium service to our customers. Our lighted mirror has passed all tests, including dropping, impact, and heavy pressure tests. If you encounter any issues with your mirror, don&apost hesitate to contact us, and we&aposll make it right. Trust us to provide the best possible experience with our premium lighted mirror for vanity table.'
-    #     ],
-    #     price: 22.47,
-    #     category: 'Beauty',
-    #     rating: 5
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 3 - Beauty
+    beauty3 = Product.create(
+        name: 'goop Beauty Eye Masks for Puffy Eyes | Under Eye Patches for Dark Circles | VEOCEL Lyocell Masks in Niacinamid Serum | Improves Crows Feet, Fine Lines, & Wrinkles | Paraben & Silicone Free | 30-Pack',
+        description: [
+            'Eye Masks for Dark Circles and Puffiness: This daily puffy eyes treatment delivers firming, brightening, moisture-boosting benefits to wake up your eyes—and refresh your whole look.',
+            'Highly Active Ingredients: The under eye patches are made of sustainably sourced VEOCEL Lyocell fibers, then soaked in a concentrated milky eye serum infused with ingredients like honey locust seed extract, olive leaf stem cells, and niacinamide.',
+            'Clean Skin Care: This cooling eye mask is formulated without parabens, petroleum, phthalates, SLS, SLES, PEGs, TEA, DEA, silicones, or artificial dyes or fragrances. And our formulas are not tested on animals.',
+            'How to Use: These under eye mask patches are easy to put on and designed not to slip—leave them on for 10 minutes to visibly improve the look of puffiness, dark circles, crows-feet, lax skin, wrinkles, and more.',
+            'Clinical Results: After one week of daily use (7 applications): 97% said their eye area appeared more rested, 97% said their eye area felt hydrated, 97% said their eye area looked refreshed, 97% said their eye area felt soothed and depuffed.'
+        ],
+        price: 125.00,
+        category: 'Beauty',
+        rating: 4
+    )
+    beauty3.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/eye-mask.jpg'), filename: 'eye-mask.jpg')
     
-    # #Product 5 - Beauty
-    # beauty5 = Product.create(
-    #     name: 'DERMALOGY by NEOGENLAB Pore Tight (Zero Peeling Mousse)',
-    #     description: [
-    #         'Upgraded version of the #1 ranked Pore Tight Peeling Mousse ✔️: Vegan, Clean Beauty, Efficacy & Size upgrade (from 80ml to 100ml)',
-    #         '“ALL-IN-ONE Exfoliation”: A unique mousse-type peeling formula that delivers total pore tightening, pore refining, sebum control, exfoliation and cleansing benefits for effective removal of blackheads, whiteheads, dead skin, dirt & impurities on the skin.',
-    #         'Convenient pore care & exfoliation: Compared to harsh physical exfoliators or pore strips, this peeling formula is simple, gentle, yet effective in helping to capture impurities, blackheads, makeup residues, and dead skin cells within the pores.',
-    #         'Firming. Tightening. Skin Lifting Effect: BEAUACTIVE ingredient helps delivers tightening benefits to sagging skin for overall smoother and firmer-looking skin.',
-    #         'Vegan & Dermatologist tested: The Pore Zero Peeling Mousse was certified vegan from the Korea Vegan Certification Center, guaranteeing the product is not using animal-derived materials, is not cross-contaminated, and not tested on animals. It also can be used safely on sensitive and troubled skin.'
-    #     ],
-    #     price: 29.95,
-    #     category: 'Beauty',
-    #     rating: 3
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 4 - Beauty
+    beauty4 = Product.create(
+        name: 'ROLOVE Makeup Mirror with Lights,10"x12" Lighted Vanity Mirror, Dimmable Touch Screen, Cosmetic Makeup Mirrors with Stand, Smart Touch Control, Lighted Up Mirrors for Makeup Desk and Bedroom',
+        description: [
+            '【Perfect Size】 Indulge in the luxurious experience of our lighted makeup mirror, meticulously crafted with the ideal size of 10" x 12". Immerse yourself in a world of beauty as this perfectly proportioned mirror unveils a flawless view of your face.',
+            '【Sturdy Stand and 360°Rotation】 Our light up mirror for desk features a robust U-shaped stand that provides stability and support. It ensures the mirror stays securely in place while you&aposre using it. Additionally, the 360-degree rotation capability allows you to position the mirror at any angle you desire, making it convenient to use from various positions.',
+            '【Smart Dimming】 Get the perfect lighting for your makeup with our smart dimming feature. Adjust the brightness from dim to bright with just a button. Our LED lights also come with eye protection to keep your eyes safe even with the increased light.',
+            '【Memorable Gift】 Looking for a thoughtful gift for a makeup lover? Look no further. Our lighted vanity makeup mirror with its compact size, adjustable lighting, sturdy stand, and intelligent dimming function is an excellent choice. It combines practicality and style, making it the ideal gift for birthdays, holidays, or any special occasion.',
+            '【Premium Service】 We stand behind the quality of our product and offer premium service to our customers. Our lighted mirror has passed all tests, including dropping, impact, and heavy pressure tests. If you encounter any issues with your mirror, don&apost hesitate to contact us, and we&aposll make it right. Trust us to provide the best possible experience with our premium lighted mirror for vanity table.'
+        ],
+        price: 22.47,
+        category: 'Beauty',
+        rating: 5
+    )
+    beauty4.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/led-mirror.jpg'), filename: 'led-mirror.jpg')
+    
+    #Product 5 - Beauty
+    beauty5 = Product.create(
+        name: 'DERMALOGY by NEOGENLAB Pore Tight (Zero Peeling Mousse)',
+        description: [
+            'Upgraded version of the #1 ranked Pore Tight Peeling Mousse ✔️: Vegan, Clean Beauty, Efficacy & Size upgrade (from 80ml to 100ml)',
+            '“ALL-IN-ONE Exfoliation”: A unique mousse-type peeling formula that delivers total pore tightening, pore refining, sebum control, exfoliation and cleansing benefits for effective removal of blackheads, whiteheads, dead skin, dirt & impurities on the skin.',
+            'Convenient pore care & exfoliation: Compared to harsh physical exfoliators or pore strips, this peeling formula is simple, gentle, yet effective in helping to capture impurities, blackheads, makeup residues, and dead skin cells within the pores.',
+            'Firming. Tightening. Skin Lifting Effect: BEAUACTIVE ingredient helps delivers tightening benefits to sagging skin for overall smoother and firmer-looking skin.',
+            'Vegan & Dermatologist tested: The Pore Zero Peeling Mousse was certified vegan from the Korea Vegan Certification Center, guaranteeing the product is not using animal-derived materials, is not cross-contaminated, and not tested on animals. It also can be used safely on sensitive and troubled skin.'
+        ],
+        price: 29.95,
+        category: 'Beauty',
+        rating: 3
+    )
+    beauty5.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/pore-mousse.jpg'), filename: 'pore-mousse.jpg')
 
-    # #Product 6- Beauty
-    # beauty6 = Product.create(
-    #     name: 'LazyGa Jade Eye Mask 2pcs - Facial Cooling Mask with 100% Real Jade for Hot & Cold Therapy to Reduce Wrinkles, Puffiness, Migraines, and Anti-Aging',
-    #     description: [
-    #         'BENEFIT - Our weighted Jade Eye Mask is made of 100% real jade stone beads, which help to reduce wrinkles, puffiness, irritation, and provide headache and migraine relief.',
-    #         'COZINESS - Our Jade Eye Mask is designed for hot and cold therapy to provide natural anti-aging benefits. The cooling sensation helps to soothe tired eyes, while the warmth improves blood circulation to help reduce dark circles and puffiness.',
-    #         'ECO-FRIENDLINESS - Our Jade Eye Mask is reusable, eco-friendly, and easy to clean. Simply wipe with a soft cloth after each use.',
-    #         'EASY TO CARRY - The compact size and lightweight design make it convenient to use at home or on the go. Take your beauty routine to the next level and relax your eyes anytime, anywhere.',
-    #         'RELAXATION - Our Jade Eye Mask is not just for beauty purposes. It can also be used for meditation and relaxation, providing a soothing and cooling sensation to help you relieve stress and tension.'
-    #     ],
-    #     price: 15.29,
-    #     category: 'Beauty',
-    #     rating: 4
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 6- Beauty
+    beauty6 = Product.create(
+        name: 'LazyGa Jade Eye Mask 2pcs - Facial Cooling Mask with 100% Real Jade for Hot & Cold Therapy to Reduce Wrinkles, Puffiness, Migraines, and Anti-Aging',
+        description: [
+            'BENEFIT - Our weighted Jade Eye Mask is made of 100% real jade stone beads, which help to reduce wrinkles, puffiness, irritation, and provide headache and migraine relief.',
+            'COZINESS - Our Jade Eye Mask is designed for hot and cold therapy to provide natural anti-aging benefits. The cooling sensation helps to soothe tired eyes, while the warmth improves blood circulation to help reduce dark circles and puffiness.',
+            'ECO-FRIENDLINESS - Our Jade Eye Mask is reusable, eco-friendly, and easy to clean. Simply wipe with a soft cloth after each use.',
+            'EASY TO CARRY - The compact size and lightweight design make it convenient to use at home or on the go. Take your beauty routine to the next level and relax your eyes anytime, anywhere.',
+            'RELAXATION - Our Jade Eye Mask is not just for beauty purposes. It can also be used for meditation and relaxation, providing a soothing and cooling sensation to help you relieve stress and tension.'
+        ],
+        price: 15.29,
+        category: 'Beauty',
+        rating: 4
+    )
+    beauty6.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/jade-eye-mask.jpg'), filename: 'jade-eye-mask.jpg')
 
-    # #Product 7 - Beauty
-    # beauty7 = Product.create(
-    #     name: 'PEACE OUT Skincare Puffy Eyes. Biocellulose Under-Eye Patches that Minimize Puffiness, Dark Circles and Tired-Looking Eyes with Caffeine and Niacinamide, 6 pairs',
-    #     description: [
-    #         'Peace Out Puffy Eyes. 6 pairs of soothing biocellulose under-eye patches that help awaken sleepy-looking eyes for a more fresh, revitalized glow and feel.',
-    #         'Revitalize Eyes in 15 Minutes. These hydrating under-eye patches are soaked with caffeine to help reduce the appearance of puffiness in the under-eye area.',
-    #         'How To. Remove the top and bottom clear protective liners. After cleansing, place the patches onto the skin and adjust to fit comfortably. Remove after 15 minutes. Do not rinse. Pat excess serum into the skin.',
-    #         'Clean, Vegan and Effective Ingredients. Caffeine minimizes the appearance of puffiness. Niacinamide reduces the look of dark circles while hyaluronic acid deeply hydrates and delivers moisture.',
-    #         'Make Peace with Your Skin. Peace Out Skincare&aposs mission is to help you bring peace to your skin through effective, clean and fun skincare solutions.'
-    #     ],
-    #     price: 23.75,
-    #     category: 'Beauty',
-    #     rating: 5
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 7 - Beauty
+    beauty7 = Product.create(
+        name: 'PEACE OUT Skincare Puffy Eyes. Biocellulose Under-Eye Patches that Minimize Puffiness, Dark Circles and Tired-Looking Eyes with Caffeine and Niacinamide, 6 pairs',
+        description: [
+            'Peace Out Puffy Eyes. 6 pairs of soothing biocellulose under-eye patches that help awaken sleepy-looking eyes for a more fresh, revitalized glow and feel.',
+            'Revitalize Eyes in 15 Minutes. These hydrating under-eye patches are soaked with caffeine to help reduce the appearance of puffiness in the under-eye area.',
+            'How To. Remove the top and bottom clear protective liners. After cleansing, place the patches onto the skin and adjust to fit comfortably. Remove after 15 minutes. Do not rinse. Pat excess serum into the skin.',
+            'Clean, Vegan and Effective Ingredients. Caffeine minimizes the appearance of puffiness. Niacinamide reduces the look of dark circles while hyaluronic acid deeply hydrates and delivers moisture.',
+            'Make Peace with Your Skin. Peace Out Skincare&aposs mission is to help you bring peace to your skin through effective, clean and fun skincare solutions.'
+        ],
+        price: 23.75,
+        category: 'Beauty',
+        rating: 5
+    )
+    beauty7.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/peace-out-puffy-eyes.jpg'), filename: 'peace-out-puffy-eyes.jpg')
 
-    # #Product 8 - Beauty
-    # beauty8 = Product.create(
-    #     name: 'BeautyBio GloPRO Tool & 4 MicroTip Attachment Heads (Face, Eye, Lip, Body)',
-    #     description: [
-    #         'The BeautyBio GloPRO Bundle includes the GloPRO tool and four attachment heads: face, eye, lip and body',
-    #         'An at-home beauty facial tool designed for every skin type.',
-    #         'PM use after cleansing and prior to applying skincare. Glide over skin for 1 minute, 3 times a week',
-    #         'Female-owned, people-minded, BeautyBio strives to empower through skincare because we believe beauty can change the world one confidence boost at time. We source the most potent ingredients and pair them with effective natural extracts to bring you clinically proven tools and topicals that delivers results, backed by science.',
-    #         'Meet the at-home micro-exfoliation tool that&aposs getting all the buzz! Think of GloPRO as your skin&aposs bestie that helps to maximize skincare absorption, refine uneven texture, smooth fine lines & wrinkles... in just 60 seconds a day'
-    #     ],
-    #     price: 314.00,
-    #     category: 'Beauty',
-    #     rating: 5
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 8 - Beauty
+    beauty8 = Product.create(
+        name: 'BeautyBio GloPRO Tool & 4 MicroTip Attachment Heads (Face, Eye, Lip, Body)',
+        description: [
+            'The BeautyBio GloPRO Bundle includes the GloPRO tool and four attachment heads: face, eye, lip and body',
+            'An at-home beauty facial tool designed for every skin type.',
+            'PM use after cleansing and prior to applying skincare. Glide over skin for 1 minute, 3 times a week',
+            'Female-owned, people-minded, BeautyBio strives to empower through skincare because we believe beauty can change the world one confidence boost at time. We source the most potent ingredients and pair them with effective natural extracts to bring you clinically proven tools and topicals that delivers results, backed by science.',
+            'Meet the at-home micro-exfoliation tool that&aposs getting all the buzz! Think of GloPRO as your skin&aposs bestie that helps to maximize skincare absorption, refine uneven texture, smooth fine lines & wrinkles... in just 60 seconds a day'
+        ],
+        price: 314.00,
+        category: 'Beauty',
+        rating: 5
+    )
+    beauty8.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/micro-roller.jpg'), filename: 'micro-roller.jpg')
 
-    # #Product 9 - Beauty
-    # beauty9 = Product.create(
-    #     name: 'Sulwhasoo Essential Comfort Firming Cream: Moisturize, Soothe, and Visibly Firm
-    #     ',
-    #     description: [
-    #         'A whipped firming cream that improves the look of elasticity for a supple, bouncy complexion. Powered by JISUN Firming Complex™, a potent blend of antioxidant-rich Goji Berries, Black Beans, and Arrowroot.',
-    #         'This whipped cream helps hydrate, nourish, and improve the appearance of firmness and elasticity.',
-    #         'Warm whipped cream with your fingertips, using continual lifting motions, smooth over the face and neck.',
-    #         'The Essential Comfort Firming Cream is a soft cream formulated with Sulwhasoo&aposs JISUN Firming Complex and JAUM Moisturizing Complex to moisturize, strengthen the skin barrier, and visibly improve skin firmness.'
-    #     ],
-    #     price: 28.00,
-    #     category: 'Beauty',
-    #     rating: 3
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 9 - Beauty
+    beauty9 = Product.create(
+        name: 'Sulwhasoo Essential Comfort Firming Cream: Moisturize, Soothe, and Visibly Firm
+        ',
+        description: [
+            'A whipped firming cream that improves the look of elasticity for a supple, bouncy complexion. Powered by JISUN Firming Complex™, a potent blend of antioxidant-rich Goji Berries, Black Beans, and Arrowroot.',
+            'This whipped cream helps hydrate, nourish, and improve the appearance of firmness and elasticity.',
+            'Warm whipped cream with your fingertips, using continual lifting motions, smooth over the face and neck.',
+            'The Essential Comfort Firming Cream is a soft cream formulated with Sulwhasoo&aposs JISUN Firming Complex and JAUM Moisturizing Complex to moisturize, strengthen the skin barrier, and visibly improve skin firmness.'
+        ],
+        price: 28.00,
+        category: 'Beauty',
+        rating: 3
+    )
+    beauty9.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/sulwhasoo-cream.jpg'), filename: 'sulwhasoo-cream.jpg')
 
-    # #Product 10 - Beauty
-    # beauty10 = Product.create(
-    #     name: 'LAPCOS Aqua Sheet Mask, Hydrating Daily Face Mask with Seawater and Plankton Extract to Nourish Skin, Korean Beauty Favorite, 5-Pack',
-    #     description: [
-    #         'REVITALIZE & HYDRATE SKIN - Our cupra rayon Aqua sheet mask contains Seawater and Plankton extract to provide much needed hydration and vitality',
-    #         'DEEP SEA WATER & PLANKTON EXTRACT - Deep dive into your skin’s greatest potential. Plankton extract, which holds vitamins, amino acids and minerals, supplies skin with deep moisture. The natural powerhouse that is Seawater provides a wave of nourishment, so that rough, tired skin regains health and energy',
-    #         'RESTORE HEALTHY SKIN - Whether your complexion is stressed from environmental aggressors or lifestyle factors, the nourishing mask, packed with nutrients, is a sejour for skin',
-    #         'K-BEAUTY ESSENTIAL - A cult favorite brand, created with the highest quality ingredients and uncompromizing dedication to innovation in beauty and skincare.',
-    #         'HOW TO USE - After cleansing and toning, unfold a single sheet and gently spread over face avoiding the eye and mouth areas. Leave on for 10-20 minutes and remove mask, gently patting remaining serum until it is fully absorbed'
-    #     ],
-    #     price: 18.00,
-    #     category: 'Beauty',
-    #     rating: 2
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 10 - Beauty
+    beauty10 = Product.create(
+        name: 'LAPCOS Aqua Sheet Mask, Hydrating Daily Face Mask with Seawater and Plankton Extract to Nourish Skin, Korean Beauty Favorite, 5-Pack',
+        description: [
+            'REVITALIZE & HYDRATE SKIN - Our cupra rayon Aqua sheet mask contains Seawater and Plankton extract to provide much needed hydration and vitality',
+            'DEEP SEA WATER & PLANKTON EXTRACT - Deep dive into your skin’s greatest potential. Plankton extract, which holds vitamins, amino acids and minerals, supplies skin with deep moisture. The natural powerhouse that is Seawater provides a wave of nourishment, so that rough, tired skin regains health and energy',
+            'RESTORE HEALTHY SKIN - Whether your complexion is stressed from environmental aggressors or lifestyle factors, the nourishing mask, packed with nutrients, is a sejour for skin',
+            'K-BEAUTY ESSENTIAL - A cult favorite brand, created with the highest quality ingredients and uncompromizing dedication to innovation in beauty and skincare.',
+            'HOW TO USE - After cleansing and toning, unfold a single sheet and gently spread over face avoiding the eye and mouth areas. Leave on for 10-20 minutes and remove mask, gently patting remaining serum until it is fully absorbed'
+        ],
+        price: 18.00,
+        category: 'Beauty',
+        rating: 2
+    )
+    beauty10.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/lapcos-mask.jpg'), filename: 'lapcos-mask.jpg')
+    
+# ------------------ #
+    
+    #Product 1 - Grocery
+    grocery1 = Product.create(
+        name: 'Simply Orange Juice, 52 fl oz, 100% Juice w/Calcium & Vitamin D, Not from Concentrate',
+        description: [
+            'Simply Orange Juice with Calcium, 52 fl oz',
+            'Fresh taste guaranteed',
+            'Not from concentrate',
+            'Non GMO'
+        ],
+        price: 4.79,
+        category: 'Grocery',
+        rating: 5
+    )
+    grocery1.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/simply-orange.jpg'), filename: 'simply-orange.jpg')
 
-    # #Product 1 - Grocery
-    # grocery1 = Product.create(
-    #     name: 'Simply Orange Juice, 52 fl oz, 100% Juice w/Calcium & Vitamin D, Not from Concentrate',
-    #     description: [
-    #         'Simply Orange Juice with Calcium, 52 fl oz',
-    #         'Fresh taste guaranteed',
-    #         'Not from concentrate',
-    #         'Non GMO'
-    #     ],
-    #     price: 4.79,
-    #     category: 'Grocery',
-    #     rating: 5
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 2 - Grocery
+    grocery2 = Product.create(
+        name: 'Strawberries, 1 Lb',
+        description: [
+            'Wash before consuming',
+            'Grown in the United States, Chile, or Mexico',
+            'Delicious on their own as a healthy snack or as part of a recipe',
+            'Store in the refrigerator for maximum shelf life',
+            'Prepackaged'
+        ],
+        price: 5.49,
+        category: 'Grocery',
+        rating: 4
+    )
+    grocery2.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/strawberries.jpg'), filename: 'strawberries.jpg')
 
-    # #Product 2 - Grocery
-    # grocery2 = Product.create(
-    #     name: 'Strawberries, 1 Lb',
-    #     description: [
-    #         'Wash before consuming',
-    #         'Grown in the United States, Chile, or Mexico',
-    #         'Delicious on their own as a healthy snack or as part of a recipe',
-    #         'Store in the refrigerator for maximum shelf life',
-    #         'Prepackaged'
-    #     ],
-    #     price: 5.49,
-    #     category: 'Grocery',
-    #     rating: 4
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 3 - Grocery
+    grocery3 = Product.create(
+        name: 'Fresh Brand Mini Cucumbers, 16 Oz
+        ',
+        description: [
+            '16-ounce package of mini cucumbers',
+            'Greenhouse-grown mini cucumbers are cool, crisp, and refreshing',
+            'Perfect for snacking or for a quick addition to an appetizer or salad',
+            'Our Fresh brand products are all about high-quality food that fits every budget, every day.'
+        ],
+        price: 2.99,
+        category: 'Grocery',
+        rating: 3
+    )
+    grocery3.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/cucumber.jpg'), filename: 'cucumber.jpg')
+    
+    #Product 4 - Grocery
+    grocery4 = Product.create(
+        name: '4th & Heart Original Grass-Fed Ghee, 9 Ounce, Keto, Pasture Raised, Lactose and Casein Free, Certified Paleo',
+        description: [
+            'WE SOURCE THE BEST: Our lactose-free ghee comes from grass-fed, pasture-raised, antibiotic and hormone free New Zealand cows.',
+            'USE ANYTIME: Our shelf-stable ghee is spreadable at room temperature. No refrigeration required',
+            'NO SHORTCUTS: Our ghee is cooked the old-fashioned way, not made with a centrifuge.',
+            'UPGRADE ANY RECIPE: Replace your current butter, olive oil, coconut oil or other cooking oil 1:1 with ghee.',
+            'DIET FRIENDLY: Great addition to any diet – Certified Keto, Paleo, Gluten Free, Ayurvedic, Whole 30, and FODMAP friendly.',
+            'HELPFUL NOTE: Ghee may liquefy during shipping, but will re-solidify within a few hours of refrigeration, or overnight at room temperature.'
+        ],
+        price: 13.29,
+        category: 'Grocery',
+        rating: 5
+    )
+    grocery4.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/ghee.jpg'), filename: 'ghee.jpg')
+    
+    #Product 5 - Grocery
+    grocery5 = Product.create(
+        name: 'Botticelli Fire Roasted Red Peppers (Pack of 1) - Ready-to-Use Sweet & Tender Red Roasted Peppers in a Jar for Sandwiches, Salad, Pizza & Any Recipes - 24oz',
+        description: [
+            'BOTTICELLI FIRE ROASTED SWEET RED PEPPERS. Grown from specially selected seeds and then fire roasted and marinated to create an amazing flavor. They&aposre made in small batches to ensure every jar satisfies your taste buds.',
+            'NUMEROUS USES. The sweet red peppers can be used in lots of dishes, from toppings on pasta and sandwiches to sautéing alongside steaks and sausages. See where your imagination, and taste buds, takes you.',
+            'AUTHENTIC TASTE OF ITALY. Premium products at an affordable price so you can create your own culinary masterpiece. Enjoy the rich, lively flavor that Italy is known for in your very own kitchen.',
+            'ALL YOUR COOKING ESSENTIALS. From pasta and sauces to olive oils and vinegars, Botticelli has everything you need for a delicious Italian meal. Bring your friends, bring your family, and bring Botticelli.',
+            'FIVE GENERATIONS OF HISTORY. Family owned and operated, Botticelli Foods is made with the heart and wisdom of over five generations.'
+        ],
+        price: 4.99,
+        category: 'Grocery',
+        rating: 3
+    )
+    grocery5.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/roasted-pepper.jpg'), filename: 'roasted-pepper.jpg')
+    
+    #Product 6 - Grocery
+    grocery6 = Product.create(
+        name: 'Welch&aposs Fruit Snacks, Mixed Fruit, Great Valentines Day Gifts for Kids, Gluten Free, Bulk Pack, Individual Single Serve Bags, 0.8 oz (Pack of 40)',
+        description: [
+            'Includes (40) 0.8 oz single serving bags',
+            'Delicious fruit snacks where fruit is the 1st Ingredient',
+            'Excellent source of Vitamins A, C & E',
+            'Gluten free, fat free & preservative free',
+            'Perfect tasty snack for school lunches, sporting games, the office and more'
+        ],
+        price: 9.49,
+        category: 'Grocery',
+        rating: 5
+    )
+    grocery6.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/fruit-gummies.jpg'), filename: 'fruit-gummies.jpg')
 
-    # #Product 3 - Grocery
-    # grocery3 = Product.create(
-    #     name: 'Fresh Brand Mini Cucumbers, 16 Oz
-    #     ',
-    #     description: [
-    #         '16-ounce package of mini cucumbers',
-    #         'Greenhouse-grown mini cucumbers are cool, crisp, and refreshing',
-    #         'Perfect for snacking or for a quick addition to an appetizer or salad',
-    #         'Our Fresh brand products are all about high-quality food that fits every budget, every day.'
-    #     ],
-    #     price: 2.99,
-    #     category: 'Grocery',
-    #     rating: 3
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
-
-    # #Product 4 - Grocery
-    # grocery4 = Product.create(
-    #     name: '4th & Heart Original Grass-Fed Ghee, 9 Ounce, Keto, Pasture Raised, Lactose and Casein Free, Certified Paleo',
-    #     description: [
-    #         'WE SOURCE THE BEST: Our lactose-free ghee comes from grass-fed, pasture-raised, antibiotic and hormone free New Zealand cows.',
-    #         'USE ANYTIME: Our shelf-stable ghee is spreadable at room temperature. No refrigeration required',
-    #         'NO SHORTCUTS: Our ghee is cooked the old-fashioned way, not made with a centrifuge.',
-    #         'UPGRADE ANY RECIPE: Replace your current butter, olive oil, coconut oil or other cooking oil 1:1 with ghee.',
-    #         'DIET FRIENDLY: Great addition to any diet – Certified Keto, Paleo, Gluten Free, Ayurvedic, Whole 30, and FODMAP friendly.',
-    #         'HELPFUL NOTE: Ghee may liquefy during shipping, but will re-solidify within a few hours of refrigeration, or overnight at room temperature.'
-    #     ],
-    #     price: 13.29,
-    #     category: 'Grocery',
-    #     rating: 5
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
-
-    # #Product 5 - Grocery
-    # grocery5 = Product.create(
-    #     name: 'Botticelli Fire Roasted Red Peppers (Pack of 1) - Ready-to-Use Sweet & Tender Red Roasted Peppers in a Jar for Sandwiches, Salad, Pizza & Any Recipes - 24oz',
-    #     description: [
-    #         'BOTTICELLI FIRE ROASTED SWEET RED PEPPERS. Grown from specially selected seeds and then fire roasted and marinated to create an amazing flavor. They&aposre made in small batches to ensure every jar satisfies your taste buds.',
-    #         'NUMEROUS USES. The sweet red peppers can be used in lots of dishes, from toppings on pasta and sandwiches to sautéing alongside steaks and sausages. See where your imagination, and taste buds, takes you.',
-    #         'AUTHENTIC TASTE OF ITALY. Premium products at an affordable price so you can create your own culinary masterpiece. Enjoy the rich, lively flavor that Italy is known for in your very own kitchen.',
-    #         'ALL YOUR COOKING ESSENTIALS. From pasta and sauces to olive oils and vinegars, Botticelli has everything you need for a delicious Italian meal. Bring your friends, bring your family, and bring Botticelli.',
-    #         'FIVE GENERATIONS OF HISTORY. Family owned and operated, Botticelli Foods is made with the heart and wisdom of over five generations.'
-    #     ],
-    #     price: 4.99,
-    #     category: 'Grocery',
-    #     rating: 3
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
-
-    # #Product 6 - Grocery
-    # grocery6 = Product.create(
-    #     name: 'Welch&aposs Fruit Snacks, Mixed Fruit, Great Valentines Day Gifts for Kids, Gluten Free, Bulk Pack, Individual Single Serve Bags, 0.8 oz (Pack of 40)',
-    #     description: [
-    #         'Includes (40) 0.8 oz single serving bags',
-    #         'Delicious fruit snacks where fruit is the 1st Ingredient',
-    #         'Excellent source of Vitamins A, C & E',
-    #         'Gluten free, fat free & preservative free',
-    #         'Perfect tasty snack for school lunches, sporting games, the office and more'
-    #     ],
-    #     price: 9.49,
-    #     category: 'Grocery',
-    #     rating: 5
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
-
-    # #Product 7 - Grocery
-    # grocery7 = Product.create(
-    #     name: 'Nate&aposs 100% Pure, Raw & Unfiltered Honey - Award-Winning Taste, 32oz. Squeeze Bottle',
-    #     description: [
-    #         'Nate&aposs 100% Pure, Raw & Unfiltered Honey is a sweetener as nature intended, with one ingredient: Honey. All we add is the bottle.',
-    #         'PURITY GUARANTEE: Every bottle of Nate&aposs most-trusted honey has a purity guarantee to uphold strict testing standards that provide an unmatched level of care and precision that would make any honeybee proud.',
-    #         'BEST TASTE: Our blend of honey varietals is crafted for exceptional taste, earning us an award-winning flavor through ChefsBestTM.',
-    #         'RAW & UNFILTERED: Raw & Unfiltered means it is gently warmed for pourability and unfiltered to keep the natural goodness, like pollen, intact.',
-    #         'DAILY DRIZZLE: Enjoy Nate&aposs 100% Pure, Raw & Unfiltered Honey on anything needing a little natural sweetness - morning coffee or tea, oatmeal, yogurt - or as a better-for-you sweetener in baked goods.'
-    #     ],
-    #     price: 16.49,
-    #     category: 'Grocery',
-    #     rating: 5
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
-
-    # #Product 8 - Grocery
-    # grocery8 = Product.create(
-    #     name: 'Royal Dansk Danish Cookie Selection, No Preservatives or Coloring Added, 12 Ounce',
-    #     description: [
-    #         'CRISP, BUTTERY COOKIE CLASSICS: Discover a selection of rich Danish butter cookies inside this 12-ounce tin : all with pure butter cookie taste and some with a flavorful coconut or vanilla twist;
-    #         ',
-    #         'DECADENT AND DISTINCTLY SHAPED: Our blue tin cookies feature our iconic and classic mix of assorted cookies in five shapes : Pretzel Style, Vanilla Ring, Finnish Style, Country Style, and Coconut;
-    #         ',
-    #         'MADE TO MELT IN YOUR MOUTH: Carefully crafted Danish cookies from Royal Dansk bring baking excellence to every batch, delivering the perfect balance of buttery crispiness in every indulgent bite;
-    #         ',
-    #         'WHY DO THEY TASTE SO GOOD: We don&apost compromise on quality and remain true to fine Danish baking tradition, using non GMO ingredients with no artificial ingredients, added preservatives, or colors;',
-    #         'LONGSTANDING COOKIE CRAFTSMANSHIP: Our crisp butter cookies have provided moments of enjoyment since 1966; With their one-of-a-kind tastes, they deliver simple and sweet memorable taste experiences'
-    #     ],
-    #     price: 5.69,
-    #     category: 'Grocery',
-    #     rating: 5
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
-
-    # #Product 9 - Grocery
-    # grocery9 = Product.create(
-    #     name: 'Prego Pasta Sauce, Italian Tomato Sauce with Roasted Garlic & Herbs, 24 Ounce Jar',
-    #     description: [
-    #         'FLAVORFUL TOMATO SAUCE: Made with sweet, vine-ripened tomatoes that are blended with roasted garlic and herbs for a savory taste that is authentically Italian',
-    #         'GLUTEN FREE PASTA SAUCE: Made almost entirely of vegetables, this spaghetti sauce is naturally gluten free and low in fat',
-    #         'LOADED WITH VEGGIES: With tomatoes as the number one ingredient, it&aposs no wonder each half cup serving delivers 40% of your daily vegetables',
-    #         'QUICK & EASY DINNERS: Pour it over pasta, use it as a base for your own recipe, or add it to a family favorite',
-    #         'FEED THE WHOLE FAMILY: One jar is 24 ounces, easily enough for a dinner for five (and leftovers!)'
-    #     ],
-    #     price: 3.69,
-    #     category: 'Grocery',
-    #     rating: 4
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
-
-    # #Product 10 - Grocery
-    # grocery10 = Product.create(
-    #     name: 'Dunkin&apos Original Blend Medium Roast Ground Coffee, 30 Ounce',
-    #     description: [
-    #         'Contains 1 - 30 ounce canister of ground coffee',
-    #         'Original Blend is the coffee that made Dunkin famous, featuring a rich, smooth taste unmatched by others',
-    #         'Medium roast coffee, specially blended and roasted to deliver the same great taste as the brewed Dunkin coffee available in Dunkin shops',
-    #         'Pre-ground, ready to brew at home sweet home',
-    #         'Enjoy the great taste of Dunkin at home'
-    #     ],
-    #     price: 21.49,
-    #     category: 'Grocery',
-    #     rating: 4
-    # )
-    # .photo.attach(io: URI.open(''), filename: '.jpg')
+    #Product 7 - Grocery
+    grocery7 = Product.create(
+        name: 'Nate&aposs 100% Pure, Raw & Unfiltered Honey - Award-Winning Taste, 32oz. Squeeze Bottle',
+        description: [
+            'Nate&aposs 100% Pure, Raw & Unfiltered Honey is a sweetener as nature intended, with one ingredient: Honey. All we add is the bottle.',
+            'PURITY GUARANTEE: Every bottle of Nate&aposs most-trusted honey has a purity guarantee to uphold strict testing standards that provide an unmatched level of care and precision that would make any honeybee proud.',
+            'BEST TASTE: Our blend of honey varietals is crafted for exceptional taste, earning us an award-winning flavor through ChefsBestTM.',
+            'RAW & UNFILTERED: Raw & Unfiltered means it is gently warmed for pourability and unfiltered to keep the natural goodness, like pollen, intact.',
+            'DAILY DRIZZLE: Enjoy Nate&aposs 100% Pure, Raw & Unfiltered Honey on anything needing a little natural sweetness - morning coffee or tea, oatmeal, yogurt - or as a better-for-you sweetener in baked goods.'
+        ],
+        price: 16.49,
+        category: 'Grocery',
+        rating: 5
+    )
+    grocery7.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/raw-honey.jpg'), filename: 'raw-honey.jpg')
+    
+    #Product 8 - Grocery
+    grocery8 = Product.create(
+        name: 'Royal Dansk Danish Cookie Selection, No Preservatives or Coloring Added, 12 Ounce',
+        description: [
+            'CRISP, BUTTERY COOKIE CLASSICS: Discover a selection of rich Danish butter cookies inside this 12-ounce tin : all with pure butter cookie taste and some with a flavorful coconut or vanilla twist;
+            ',
+            'DECADENT AND DISTINCTLY SHAPED: Our blue tin cookies feature our iconic and classic mix of assorted cookies in five shapes : Pretzel Style, Vanilla Ring, Finnish Style, Country Style, and Coconut;
+            ',
+            'MADE TO MELT IN YOUR MOUTH: Carefully crafted Danish cookies from Royal Dansk bring baking excellence to every batch, delivering the perfect balance of buttery crispiness in every indulgent bite;
+            ',
+            'WHY DO THEY TASTE SO GOOD: We don&apost compromise on quality and remain true to fine Danish baking tradition, using non GMO ingredients with no artificial ingredients, added preservatives, or colors;',
+            'LONGSTANDING COOKIE CRAFTSMANSHIP: Our crisp butter cookies have provided moments of enjoyment since 1966; With their one-of-a-kind tastes, they deliver simple and sweet memorable taste experiences'
+        ],
+        price: 5.69,
+        category: 'Grocery',
+        rating: 5
+    )
+    grocery8.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/danish-cookies.jpg'), filename: 'danish-cookies.jpg')
+    
+    #Product 9 - Grocery
+    grocery9 = Product.create(
+        name: 'Prego Pasta Sauce, Italian Tomato Sauce with Roasted Garlic & Herbs, 24 Ounce Jar',
+        description: [
+            'FLAVORFUL TOMATO SAUCE: Made with sweet, vine-ripened tomatoes that are blended with roasted garlic and herbs for a savory taste that is authentically Italian',
+            'GLUTEN FREE PASTA SAUCE: Made almost entirely of vegetables, this spaghetti sauce is naturally gluten free and low in fat',
+            'LOADED WITH VEGGIES: With tomatoes as the number one ingredient, it&aposs no wonder each half cup serving delivers 40% of your daily vegetables',
+            'QUICK & EASY DINNERS: Pour it over pasta, use it as a base for your own recipe, or add it to a family favorite',
+            'FEED THE WHOLE FAMILY: One jar is 24 ounces, easily enough for a dinner for five (and leftovers!)'
+        ],
+        price: 3.69,
+        category: 'Grocery',
+        rating: 4
+    )
+    grocery9.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/pasta-sauce.jpg'), filename: 'pasta-sauce.jpg')
+    
+    #Product 10 - Grocery
+    grocery10 = Product.create(
+        name: 'Dunkin&apos Original Blend Medium Roast Ground Coffee, 30 Ounce',
+        description: [
+            'Contains 1 - 30 ounce canister of ground coffee',
+            'Original Blend is the coffee that made Dunkin famous, featuring a rich, smooth taste unmatched by others',
+            'Medium roast coffee, specially blended and roasted to deliver the same great taste as the brewed Dunkin coffee available in Dunkin shops',
+            'Pre-ground, ready to brew at home sweet home',
+            'Enjoy the great taste of Dunkin at home'
+        ],
+        price: 21.49,
+        category: 'Grocery',
+        rating: 4
+    )
+    grocery10.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/dunkin-mix.jpg'), filename: 'dunkin-mix.jpg')

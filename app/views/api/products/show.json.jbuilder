@@ -4,4 +4,4 @@ json.extract! @product, :id, :name, :description, :price, :category, :rating
 
 json.description @product.description.split("\n")
 
-json.photoUrl product.photo.attached? ? product.photo.url : nil
+json.photoUrl @product.photo.attached? ? @product.photo.url : nil

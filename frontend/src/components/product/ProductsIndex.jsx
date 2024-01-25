@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchProducts, selectProductsArray } from '../../store/product';
 import './ProductsIndex.css';
-import placeholder from '../../images/placeholder.svg';
+// import placeholder from '../../images/placeholder.svg';
 
 function ProductsIndex() {
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function ProductsIndex() {
                 {products.map((product, index) => (
                     <NavLink key={`${product.id}_${index}`} to={`/products/${product.id}`}>
                         <div className="productContainer">
-                            <img src={placeholder} alt={product.name} />
+                            <img className="productImage" src={product.photoUrl} alt={product.name} />
                             <div className="containerContent">
                                 <p className='productName'>{product.name}</p>
                                 <p className='productPrice'>${product.price}</p>

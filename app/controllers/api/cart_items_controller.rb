@@ -3,8 +3,16 @@ class Api::CartItemsController < ApplicationController
     
     def index 
         if current_user
-            @cart_items = current_user.cart_items 
-            render :index
+            @cart_items = current_user.cart_items
+            
+            if @cart_items.present?
+                render :index
+            else
+                render json: { cart_items: [] }
+            end
+            
+        else
+            render json: { error: 'User Not Found' }, status: :unprocessable_entity
         end
     end 
     

@@ -59,7 +59,7 @@ const ItemIndex = () => {
   return (
     <div className="itemIndexPage">
       <div className="itemImageContainer">
-        <img src={product.photoUrl} alt={product.name} />
+        <img className="productImage" src={product.photoUrl} alt={product.name} />
         {/* <img src={placeholder} alt={product.name} /> */}
       </div>
       <div className="itemContentContainer">
