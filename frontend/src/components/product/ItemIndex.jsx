@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { fetchProduct, selectProduct } from "../../store/product";
 import { createCartItem, memoizedSelectCartItems, updateCartItem } from "../../store/cartItem";
 import "./ItemIndex.css";
+import Rating from "./Rating";
 
 const ItemIndex = () => {
   const dispatch = useDispatch();
@@ -63,11 +64,15 @@ const ItemIndex = () => {
         <div className="middleProductPriceContainer">
           <h3 className="middleProductPriceText">{product.name}</h3>
         </div>
-        <div className="middleDivider"></div>
-        <div className="middleProductPriceContainer">
-          <p className="middleProductPriceText">${product.price}</p>
+        <div className='reviewContainer'>
+          <div className='reviewItemsDiv'><Rating rating={product.rating} /></div>
         </div>
+        <div className="middleDivider2"></div>
+          <div className="middleProductPriceContainer">
+            <p className="middleProductPriceText">${product.price}</p>
+          </div>
         <div>
+          <div className="middleDivider1"></div>
           <p className="aboutItemTag">About this item:</p>
           <ul className="productDetailList">
             {parsedDescription.map((detail, index) => (

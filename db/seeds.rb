@@ -59,7 +59,7 @@ require "open-uri"
     
     # Product 2 - Home
     home2 = Product.create(
-        name: '4 Pack Candles for Home Scented, Lavender Scented Candles 28 Oz Sage Candles for Cleansing House Negative Energy 200 Hour Long Lasting Aromatherapy Candles Gifts for Women Christmas Birthday',
+        name: '4 Pack Candles for Home Scented, Lavender Scented Candles 28 Oz Sage Candles',
         description: [
             '【 2 Pleasant Scent Lavender Candles & Sage Candle】2Pack Lavender Candles can be used for stress relief, improving sleep. 2Pack Sage Candles for cleansing house negative energy and cleansing air in the room. These scented candles create a natural harmony for home and body. Pleasant aromatherapy jar candles surround you with strong fragrance and soft glow, smell like a fresh bouquet.',
             '【100% Natural Soy Wax Candles】The relaxing aromatherapy candle is made of naturally cultivated sage, lavender and 100% natural soy wax, wick is made of Lead free cotton, perfect for the bathroom, bedroom, kitchen, living room, office, etc. Burns clean and smokless which is friendly to children and pets., fresh the air and relax your mood.',
@@ -399,20 +399,20 @@ require "open-uri"
     grocery2.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/strawberries.jpg'), filename: 'strawberries.jpg')
 
     #Product 3 - Grocery
-    grocery3 = Product.create(
-        name: 'Fresh Brand Mini Cucumbers, 16 Oz
-        ',
-        description: [
-            '16-ounce package of mini cucumbers',
-            'Greenhouse-grown mini cucumbers are cool, crisp, and refreshing',
-            'Perfect for snacking or for a quick addition to an appetizer or salad',
-            'Our Fresh brand products are all about high-quality food that fits every budget, every day.'
-        ],
-        price: 2.99,
-        category: 'Grocery',
-        rating: 3
-    )
-    grocery3.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/cucumber.jpg'), filename: 'cucumber.jpg')
+    # grocery3 = Product.create(
+    #     name: 'Fresh Brand Mini Cucumbers, 16 Oz
+    #     ',
+    #     description: [
+    #         '16-ounce package of mini cucumbers',
+    #         'Greenhouse-grown mini cucumbers are cool, crisp, and refreshing',
+    #         'Perfect for snacking or for a quick addition to an appetizer or salad',
+    #         'Our Fresh brand products are all about high-quality food that fits every budget, every day.'
+    #     ],
+    #     price: 2.99,
+    #     category: 'Grocery',
+    #     rating: 3
+    # )
+    # grocery3.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/cucumber.jpg'), filename: 'cucumber.jpg')
     
     #Product 4 - Grocery
     grocery4 = Product.create(

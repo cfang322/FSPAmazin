@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchProducts, selectProductsArray } from '../../store/product';
 import './ProductsIndex.css';
-// import placeholder from '../../images/placeholder.svg';
+import Rating from './Rating';
 
 function ProductsIndex() {
     const dispatch = useDispatch();
@@ -23,6 +23,7 @@ function ProductsIndex() {
                             <img className="productImage" src={product.photoUrl} alt={product.name} />
                             <div className="containerContent">
                                 <p className='productName'>{product.name}</p>
+                                <Rating rating={product.rating} />
                                 <p className='productPrice'>${product.price}</p>
                             </div>
                         </div>

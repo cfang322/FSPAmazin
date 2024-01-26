@@ -1,0 +1,12 @@
+.star-rating {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.star {
+    color: #9c9c9c;
+}
+
+.star.filled {
+    color: rgb(255, 217, 0);
+}
