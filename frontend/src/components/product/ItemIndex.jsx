@@ -3,9 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchProduct, selectProduct } from "../../store/product";
 import { createCartItem, memoizedSelectCartItems, updateCartItem } from "../../store/cartItem";
-import placeholder from "../../images/placeholder.svg";
-// import git from "../../images/github.png";
-// import linkedin from "../../images/linkedin.png";
 import "./ItemIndex.css";
 
 const ItemIndex = () => {

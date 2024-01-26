@@ -51,7 +51,7 @@ require "open-uri"
             'Now more clothlike* *vs. previous product.',
             'Why use more when you can use less* *vs. leading ordinary brand.'
         ],
-        price: 23.20,
+        price: 23.19,
         category: 'Home',
         rating: 4
     )
@@ -74,23 +74,23 @@ require "open-uri"
     home2.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/candles.jpg'), filename: 'candles.jpg')
     
     # Product 3 - Home
-    home3 = Product.create(
-        name: 'BLUEAIR Air Purifier Large Room, Air Cleaner for Dust Pet Dander Smoke Mold Pollen Bacteria Virus Allergen, Odor Removal, for Home Bedroom Living Room, Washable Pre Filter, HEPASilent, Blue 211+ Auto',
-        description: [
-            'AUTO ADJUSTS SO YOU CAN REST EASY: One touch auto mode uses a particle sensor to monitor pollutant levels and adjusts fan to ensure optimal air quality; LED indicator displays air quality status as excellent (blue), moderate (orange) or polluted (red)',
-            'CLEAN AIR IN MINUTES: Blueair’s HEPASilent dual filtration delivers up to 45% faster cleaning and up to 67% less noise than traditional HEPA filtration alone; Quickly cleans 550sqft large room in about 12.5 min or up to 2640sqft XL space in 60min, on high',
-            'RATED BEST FOR LOWEST ANNUAL ENERGY CONSUMPTION: Quieter (23 dB) than whisper on low; ENERGY STAR rated - uses less energy (4W) than an LED lightbulb on low so it’s kind to your wallet and the planet',
-            'REMOVES 99.99% OF COMMON ALLERGENS: Helps reduce allergens and pollutants that trigger allergy and asthma symptoms',
-            'REMOVES ODOR & PARTICLES DOWN TO 0.1 MICRON: Ideal for smoke & smog during wildfire season; Removes 99.97% of airborne particles like smoke, dust, viruses and pet dander, while the carbon filter traps light household odors from smoking, pets and cooking',
-            'MOST AWARDED AIR PURIFIER BRAND IN THE US: Blue Pure 211 plus Auto has won Good Housekeeping – 10 Best Air Purifiers of 2021, Best Overall Air Purifier',
-            'INDEPENDENTLY TESTED FOR PERFORMANCE & SAFETY, ZERO OZONE: AHAM Verifide for CADR; Ozone Safety Standards Certified by CARB; Zero Ozone Verified (<5 ppb) by Intertek Sustainability Program; Trusted Education Partner of British Health Professional Academy',
-            'GENUINE FILTERS FOR OPTIMAL PERFORMANCE: Replace your filter every 6 months to ensure proper functionality & only use genuine Blueair filters; Shop 211 plus Auto replacement filter: B08WWS6XSG; Upgrade to SmokeBlock filter for enhanced removal: B0B453ZDZ6'
-        ],
-        price: 254.99,
-        category: 'Home',
-        rating: 4
-    )
-    home3.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/air-purifier.jpg'), filename: 'air-purifier.jpg')
+    # home3 = Product.create(
+    #     name: 'BLUEAIR Air Purifier Large Room, Air Cleaner for Dust Pet Dander Smoke Mold Pollen Bacteria Virus Allergen, Odor Removal, for Home Bedroom Living Room, Washable Pre Filter, HEPASilent, Blue 211+ Auto',
+    #     description: [
+    #         'AUTO ADJUSTS SO YOU CAN REST EASY: One touch auto mode uses a particle sensor to monitor pollutant levels and adjusts fan to ensure optimal air quality; LED indicator displays air quality status as excellent (blue), moderate (orange) or polluted (red)',
+    #         'CLEAN AIR IN MINUTES: Blueair&aposs HEPASilent dual filtration delivers up to 45% faster cleaning and up to 67% less noise than traditional HEPA filtration alone; Quickly cleans 550sqft large room in about 12.5 min or up to 2640sqft XL space in 60min, on high',
+    #         'RATED BEST FOR LOWEST ANNUAL ENERGY CONSUMPTION: Quieter (23 dB) than whisper on low; ENERGY STAR rated - uses less energy (4W) than an LED lightbulb on low so it’s kind to your wallet and the planet',
+    #         'REMOVES 99.99% OF COMMON ALLERGENS: Helps reduce allergens and pollutants that trigger allergy and asthma symptoms',
+    #         'REMOVES ODOR & PARTICLES DOWN TO 0.1 MICRON: Ideal for smoke & smog during wildfire season; Removes 99.97% of airborne particles like smoke, dust, viruses and pet dander, while the carbon filter traps light household odors from smoking, pets and cooking',
+    #         'MOST AWARDED AIR PURIFIER BRAND IN THE US: Blue Pure 211 plus Auto has won Good Housekeeping – 10 Best Air Purifiers of 2021, Best Overall Air Purifier',
+    #         'INDEPENDENTLY TESTED FOR PERFORMANCE & SAFETY, ZERO OZONE: AHAM Verifide for CADR; Ozone Safety Standards Certified by CARB; Zero Ozone Verified (<5 ppb) by Intertek Sustainability Program; Trusted Education Partner of British Health Professional Academy',
+    #         'GENUINE FILTERS FOR OPTIMAL PERFORMANCE: Replace your filter every 6 months to ensure proper functionality & only use genuine Blueair filters; Shop 211 plus Auto replacement filter: B08WWS6XSG; Upgrade to SmokeBlock filter for enhanced removal: B0B453ZDZ6'
+    #     ],
+    #     price: 254.99,
+    #     category: 'Home',
+    #     rating: 4
+    # )
+    # home3.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/air-purifier.jpg'), filename: 'air-purifier.jpg')
 
     # Product 4 - Home
     home4 = Product.create(
@@ -110,18 +110,18 @@ require "open-uri"
     home4.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/rug.jpg'), filename: 'rug.jpg')
 
     # Product 5 - Home
-    home5 = Product.create(
-        name: 'Smeg BLF01CRUS 50s Style Blender,, Cream, 48 Ounces',
-        description: [
-            'Die cast aluminum powder coated body and backlit chrome knob',
-            '3 Preset programs: Smoothie, ice crush and pulse',
-            '1,5 Lt/ 48 Oz/ 6 Cups Tritan BPA-Free Jug'
-        ],
-        price: 289.95,
-        category: 'Home',
-        rating: 4
-    )
-    home5.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/blender.jpg'), filename: 'blender.jpg')
+    # home5 = Product.create(
+    #     name: 'Smeg BLF01CRUS 50s Style Blender,, Cream, 48 Ounces',
+    #     description: [
+    #         'Die cast aluminum powder coated body and backlit chrome knob',
+    #         '3 Preset programs: Smoothie, ice crush and pulse',
+    #         '1,5 Lt/ 48 Oz/ 6 Cups Tritan BPA-Free Jug'
+    #     ],
+    #     price: 289.95,
+    #     category: 'Home',
+    #     rating: 4
+    # )
+    # home5.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/blender.jpg'), filename: 'blender.jpg')
 
     # Product 6 - Home
     home6 = Product.create(
@@ -133,12 +133,12 @@ require "open-uri"
             'VERSATILITY AT ITS FINEST: This 10.5-inch pan excels at braising, searing, steaming, sautéing, frying, boiling, baking, serving, and storing, truly accommodating all your culinary needs.',
             'QUALITY AND DURABILITY: Built with premium stainless-steel handle and aluminum body, the Always Pan 2.0 is compatible with all stovetops, including induction. It also features a sturdy lid, making it a reliable and long-lasting addition to your kitchen.'
         ],
-        price: 150.00,
+        price: 150.99,
         category: 'Home',
         rating: 5
     )
     home6.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/ceramic-pan.jpg'), filename: 'ceramic-pan.jpg')
-
+    
     # Product 7 - Home
     home7 = Product.create(
         name: '6 Tier Narrow Shoe Rack, Small Stackable Shoe Stand, Space Saving Furniture Shoe Storage Organizer for Entryway, Closet, Vertical Shoe Tower Rack',
@@ -156,37 +156,37 @@ require "open-uri"
     home7.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/shoe-shelf.jpg'), filename: 'shoe-shelf.jpg')
     
     # Product 8 - Home
-    home8 = Product.create(
-        name: 'CAPHAUS Artificial Fiddle Leaf Fig Tree, 6/7 Feet in Pot with Dried Moss, for Indoor House Home Office Store, Potted Ficus Lyrata Faux Tree, Fake Plant Modern Decoration Gift for Housewarming',
-        description: [
-            'Living with green - Overall Product Dimensions: Standing 6 Feet, 72 Inch from a planter (included in height) ; Planter Dimensions: H: 5.9 Inch. W: 5.9 Inch. Professional crafted design to mimic the appearance of a real-life fiddle leaf fig tree, intricate detailing on the leaves, looking close to reality. This tree will let you feel the presence of nature. Living every moment with green.',
-            'Durable and adjustable - This artificial tree is made of sturdy and premium material (real touch, waterproof, eco-friendly). The base is made of solid cement which to prevent children, pets knock it down. The tree may need to be re-shaped when removed from box to achieve its intended appearance, feel free to adjust the leaves to the shape you like.',
-            'Free maintenance: Does not need sunlight, fertilizing, and watering. Looks full and fresh every day. No need to water it daily or to offer special attention. Tired of dead plants? Try this! Impossible to kill artificial tree. If the tree happens to get a little dusty, simply use damp cloth or duster to wipe clean. Look pleasing to the eye, relieve your fatigue of the day, and give you peace of mind.',
-            'Flexible decor - Perfect for any setting throughout the household. Add modern style and a green atmosphere to your living room, office, and shop. Perfect for placing on a balcony, terrace, or living room. Decorating the shop with the stylish tree. Faux moss and plant are individual items that can be assembled with ease!',
-            'Gorgeous plant for you - Available in 6 / 7 feet, suitable for every corner and place. Also, please do not hesitate to contact us by sending us a message through your Buyer Center, our customer service is kind and efficient to offer you a best solution for any problem you had. We offer premium products for you while exceeding highest industry standards and offer thoughtful and considerate customer care.'
-        ],
-        price: 60.50,
-        category: 'Home',
-        rating: 4
-    )
-    home8.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/fake-plant.jpg'), filename: 'fake-plant.jpg')
+    # home8 = Product.create(
+    #     name: 'CAPHAUS Artificial Fiddle Leaf Fig Tree, 6/7 Feet in Pot with Dried Moss, for Indoor House Home Office Store, Potted Ficus Lyrata Faux Tree, Fake Plant Modern Decoration Gift for Housewarming',
+    #     description: [
+    #         'Living with green - Overall Product Dimensions: Standing 6 Feet, 72 Inch from a planter (included in height) ; Planter Dimensions: H: 5.9 Inch. W: 5.9 Inch. Professional crafted design to mimic the appearance of a real-life fiddle leaf fig tree, intricate detailing on the leaves, looking close to reality. This tree will let you feel the presence of nature. Living every moment with green.',
+    #         'Durable and adjustable - This artificial tree is made of sturdy and premium material (real touch, waterproof, eco-friendly). The base is made of solid cement which to prevent children, pets knock it down. The tree may need to be re-shaped when removed from box to achieve its intended appearance, feel free to adjust the leaves to the shape you like.',
+    #         'Free maintenance: Does not need sunlight, fertilizing, and watering. Looks full and fresh every day. No need to water it daily or to offer special attention. Tired of dead plants? Try this! Impossible to kill artificial tree. If the tree happens to get a little dusty, simply use damp cloth or duster to wipe clean. Look pleasing to the eye, relieve your fatigue of the day, and give you peace of mind.',
+    #         'Flexible decor - Perfect for any setting throughout the household. Add modern style and a green atmosphere to your living room, office, and shop. Perfect for placing on a balcony, terrace, or living room. Decorating the shop with the stylish tree. Faux moss and plant are individual items that can be assembled with ease!',
+    #         'Gorgeous plant for you - Available in 6 / 7 feet, suitable for every corner and place. Also, please do not hesitate to contact us by sending us a message through your Buyer Center, our customer service is kind and efficient to offer you a best solution for any problem you had. We offer premium products for you while exceeding highest industry standards and offer thoughtful and considerate customer care.'
+    #     ],
+    #     price: 60.50,
+    #     category: 'Home',
+    #     rating: 4
+    # )
+    # home8.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/fake-plant.jpg'), filename: 'fake-plant.jpg')
 
     # Product 9 - Home
-    home9 = Product.create(
-        name: 'Hoover ONEPWR Evolve Pet Cordless Small Upright Vacuum Cleaner, Lightweight Stick Vac, For Carpet and Hard Floor, BH53422V, Black',
-        description: [
-            'CORDLESS: Delivers cord-free convenience with the removable and rechargeable ONEPWR 4.0 Ah MAX battery.Charge Time 3-4 hours. Yes Battery Amp Hours 4.0.',
-            'PERFECT FOR PETS: Tackle stubborn pet hair and dirt through out the home',
-            'ULTRA LIGHTWEIGHT : Weighs less than 9 lbs when you lift it, feels like 2 lbs when you recline it and start vacuuming.',
-            'HOLDS 3X MORE DIRT AND PET HAIR: Larger dirt cup capacity than a stick vacuum for less trips to the trash can.',
-            'PERFECT FOR CARPET AND HARDFLOOR: On/Off brushroll helps effortlessly transition from carpets to hard floors with the touch of a button.',
-            'INLCUDED: Evolve Pet, ONEPWR 4.0 Ah MAX Battery, Charger'
-        ],
-        price: 178.99,
-        category: 'Home',
-        rating: 5
-    )
-    home9.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/vacuum.jpg'), filename: 'vacuum.jpg')
+    # home9 = Product.create(
+    #     name: 'Hoover ONEPWR Evolve Pet Cordless Small Upright Vacuum Cleaner, Lightweight Stick Vac, For Carpet and Hard Floor, BH53422V, Black',
+    #     description: [
+    #         'CORDLESS: Delivers cord-free convenience with the removable and rechargeable ONEPWR 4.0 Ah MAX battery.Charge Time 3-4 hours. Yes Battery Amp Hours 4.0.',
+    #         'PERFECT FOR PETS: Tackle stubborn pet hair and dirt through out the home',
+    #         'ULTRA LIGHTWEIGHT : Weighs less than 9 lbs when you lift it, feels like 2 lbs when you recline it and start vacuuming.',
+    #         'HOLDS 3X MORE DIRT AND PET HAIR: Larger dirt cup capacity than a stick vacuum for less trips to the trash can.',
+    #         'PERFECT FOR CARPET AND HARDFLOOR: On/Off brushroll helps effortlessly transition from carpets to hard floors with the touch of a button.',
+    #         'INLCUDED: Evolve Pet, ONEPWR 4.0 Ah MAX Battery, Charger'
+    #     ],
+    #     price: 178.99,
+    #     category: 'Home',
+    #     rating: 5
+    # )
+    # home9.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/vacuum.jpg'), filename: 'vacuum.jpg')
     
     # Product 10 - Home
     home10 = Product.create(
@@ -216,7 +216,7 @@ require "open-uri"
             'Formula for Glowing Skin: Infused with 60% Propolis Extract & 2% Niacinamide, reduces pores & calms the skin, revealing clear skin.',
             'For Every Skin Type: Our tailored transformative formula is designed to cater to oily, combination, & sensitive skin alike.'
         ],
-        price: 17.00,
+        price: 17.99,
         category: 'Beauty',
         rating: 4
     )
@@ -247,7 +247,7 @@ require "open-uri"
             'How to Use: These under eye mask patches are easy to put on and designed not to slip—leave them on for 10 minutes to visibly improve the look of puffiness, dark circles, crows-feet, lax skin, wrinkles, and more.',
             'Clinical Results: After one week of daily use (7 applications): 97% said their eye area appeared more rested, 97% said their eye area felt hydrated, 97% said their eye area looked refreshed, 97% said their eye area felt soothed and depuffed.'
         ],
-        price: 125.00,
+        price: 125.89,
         category: 'Beauty',
         rating: 4
     )
@@ -327,7 +327,7 @@ require "open-uri"
             'Female-owned, people-minded, BeautyBio strives to empower through skincare because we believe beauty can change the world one confidence boost at time. We source the most potent ingredients and pair them with effective natural extracts to bring you clinically proven tools and topicals that delivers results, backed by science.',
             'Meet the at-home micro-exfoliation tool that&aposs getting all the buzz! Think of GloPRO as your skin&aposs bestie that helps to maximize skincare absorption, refine uneven texture, smooth fine lines & wrinkles... in just 60 seconds a day'
         ],
-        price: 314.00,
+        price: 314.99,
         category: 'Beauty',
         rating: 5
     )
@@ -343,7 +343,7 @@ require "open-uri"
             'Warm whipped cream with your fingertips, using continual lifting motions, smooth over the face and neck.',
             'The Essential Comfort Firming Cream is a soft cream formulated with Sulwhasoo&aposs JISUN Firming Complex and JAUM Moisturizing Complex to moisturize, strengthen the skin barrier, and visibly improve skin firmness.'
         ],
-        price: 28.00,
+        price: 28.89,
         category: 'Beauty',
         rating: 3
     )
@@ -359,7 +359,7 @@ require "open-uri"
             'K-BEAUTY ESSENTIAL - A cult favorite brand, created with the highest quality ingredients and uncompromizing dedication to innovation in beauty and skincare.',
             'HOW TO USE - After cleansing and toning, unfold a single sheet and gently spread over face avoiding the eye and mouth areas. Leave on for 10-20 minutes and remove mask, gently patting remaining serum until it is fully absorbed'
         ],
-        price: 18.00,
+        price: 18.99,
         category: 'Beauty',
         rating: 2
     )
@@ -448,20 +448,20 @@ require "open-uri"
     grocery5.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/roasted-pepper.jpg'), filename: 'roasted-pepper.jpg')
     
     #Product 6 - Grocery
-    grocery6 = Product.create(
-        name: 'Welch&aposs Fruit Snacks, Mixed Fruit, Great Valentines Day Gifts for Kids, Gluten Free, Bulk Pack, Individual Single Serve Bags, 0.8 oz (Pack of 40)',
-        description: [
-            'Includes (40) 0.8 oz single serving bags',
-            'Delicious fruit snacks where fruit is the 1st Ingredient',
-            'Excellent source of Vitamins A, C & E',
-            'Gluten free, fat free & preservative free',
-            'Perfect tasty snack for school lunches, sporting games, the office and more'
-        ],
-        price: 9.49,
-        category: 'Grocery',
-        rating: 5
-    )
-    grocery6.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/fruit-gummies.jpg'), filename: 'fruit-gummies.jpg')
+    # grocery6 = Product.create(
+    #     name: 'Welch&aposs Fruit Snacks, Mixed Fruit, Great Valentines Day Gifts for Kids, Gluten Free, Bulk Pack, Individual Single Serve Bags, 0.8 oz (Pack of 40)',
+    #     description: [
+    #         'Includes (40) 0.8 oz single serving bags',
+    #         'Delicious fruit snacks where fruit is the 1st Ingredient',
+    #         'Excellent source of Vitamins A, C & E',
+    #         'Gluten free, fat free & preservative free',
+    #         'Perfect tasty snack for school lunches, sporting games, the office and more'
+    #     ],
+    #     price: 9.49,
+    #     category: 'Grocery',
+    #     rating: 5
+    # )
+    # grocery6.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/fruit-gummies.jpg'), filename: 'fruit-gummies.jpg')
 
     #Product 7 - Grocery
     grocery7 = Product.create(
