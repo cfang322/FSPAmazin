@@ -2,6 +2,9 @@
 
 Check out the [Live Site]()!
 
+### Introduction
+
+
 Things you may want to cover:
 
 * Ruby version
