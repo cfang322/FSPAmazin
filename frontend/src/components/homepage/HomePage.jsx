@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import banner from "../../images/amazon-banner2.jpg";
 import './HomePage.css';
 
