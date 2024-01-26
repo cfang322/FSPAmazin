@@ -124,20 +124,20 @@ require "open-uri"
     # home5.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/blender.jpg'), filename: 'blender.jpg')
 
     # Product 6 - Home
-    home6 = Product.create(
-        name: 'Our Place 10.5-Inch Ceramic Nonstick Skillet Pan, Toxin-Free with Stainless Steel Handle, Oven Safe - Blue Salt',
-        description: [
-            'ALL-IN-ONE COOKING POWER: With over 45 patents promising quality and ingenuity, the Always Pan 2.0 replaces ten traditional cookware pieces, from frying pans to saucepots, making it the ultimate multitasker in the kitchen.',
-            'HEALTH-CONSCIOUS, TOXIN-FREE COOKING: The Always Pan 2.0 is crafted without PTFEs, PFOAs, other PFAS, as well as other potentially toxic materials like lead and cadmium, ensuring safer and healthier meals for you and your family.',
-            'SUPERIOR NONSTICK PERFORMANCE: Experience the benefits of Thermakind, our more advanced ceramic coating that is 50% longer lasting, providing effortless food release and easy cleanup.',
-            'VERSATILITY AT ITS FINEST: This 10.5-inch pan excels at braising, searing, steaming, sautéing, frying, boiling, baking, serving, and storing, truly accommodating all your culinary needs.',
-            'QUALITY AND DURABILITY: Built with premium stainless-steel handle and aluminum body, the Always Pan 2.0 is compatible with all stovetops, including induction. It also features a sturdy lid, making it a reliable and long-lasting addition to your kitchen.'
-        ],
-        price: 150.99,
-        category: 'Home',
-        rating: 5
-    )
-    home6.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/ceramic-pan.jpg'), filename: 'ceramic-pan.jpg')
+    # home6 = Product.create(
+    #     name: 'Our Place 10.5-Inch Ceramic Nonstick Skillet Pan, Toxin-Free with Stainless Steel Handle, Oven Safe - Blue Salt',
+    #     description: [
+    #         'ALL-IN-ONE COOKING POWER: With over 45 patents promising quality and ingenuity, the Always Pan 2.0 replaces ten traditional cookware pieces, from frying pans to saucepots, making it the ultimate multitasker in the kitchen.',
+    #         'HEALTH-CONSCIOUS, TOXIN-FREE COOKING: The Always Pan 2.0 is crafted without PTFEs, PFOAs, other PFAS, as well as other potentially toxic materials like lead and cadmium, ensuring safer and healthier meals for you and your family.',
+    #         'SUPERIOR NONSTICK PERFORMANCE: Experience the benefits of Thermakind, our more advanced ceramic coating that is 50% longer lasting, providing effortless food release and easy cleanup.',
+    #         'VERSATILITY AT ITS FINEST: This 10.5-inch pan excels at braising, searing, steaming, sautéing, frying, boiling, baking, serving, and storing, truly accommodating all your culinary needs.',
+    #         'QUALITY AND DURABILITY: Built with premium stainless-steel handle and aluminum body, the Always Pan 2.0 is compatible with all stovetops, including induction. It also features a sturdy lid, making it a reliable and long-lasting addition to your kitchen.'
+    #     ],
+    #     price: 150.99,
+    #     category: 'Home',
+    #     rating: 5
+    # )
+    # home6.photo.attach(io: URI.open('https://amazin-seeds.s3.amazonaws.com/products-seeds-images/ceramic-pan.jpg'), filename: 'ceramic-pan.jpg')
     
     # Product 7 - Home
     home7 = Product.create(
@@ -239,7 +239,7 @@ require "open-uri"
     
     #Product 3 - Beauty
     beauty3 = Product.create(
-        name: 'goop Beauty Eye Masks for Puffy Eyes | Under Eye Patches for Dark Circles | VEOCEL Lyocell Masks in Niacinamid Serum | Improves Crows Feet, Fine Lines, & Wrinkles | Paraben & Silicone Free | 30-Pack',
+        name: 'goop Beauty Eye Masks for Puffy Eyes | Under Eye Patches for Dark Circles | VEOCEL Lyocell Masks in Niacinamid Serum',
         description: [
             'Eye Masks for Dark Circles and Puffiness: This daily puffy eyes treatment delivers firming, brightening, moisture-boosting benefits to wake up your eyes—and refresh your whole look.',
             'Highly Active Ingredients: The under eye patches are made of sustainably sourced VEOCEL Lyocell fibers, then soaked in a concentrated milky eye serum infused with ingredients like honey locust seed extract, olive leaf stem cells, and niacinamide.',
@@ -303,7 +303,7 @@ require "open-uri"
 
     #Product 7 - Beauty
     beauty7 = Product.create(
-        name: 'PEACE OUT Skincare Puffy Eyes. Biocellulose Under-Eye Patches that Minimize Puffiness, Dark Circles and Tired-Looking Eyes with Caffeine and Niacinamide, 6 pairs',
+        name: 'PEACE OUT Skincare Puffy Eyes. Biocellulose Under-Eye Patches that Minimize Puffiness, 6 pairs',
         description: [
             'Peace Out Puffy Eyes. 6 pairs of soothing biocellulose under-eye patches that help awaken sleepy-looking eyes for a more fresh, revitalized glow and feel.',
             'Revitalize Eyes in 15 Minutes. These hydrating under-eye patches are soaked with caffeine to help reduce the appearance of puffiness in the under-eye area.',

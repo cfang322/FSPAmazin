@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { fetchProducts, selectProductsArray } from '../../store/product';
 import './ProductsIndex.css';
 import Rating from './Rating';
+import primeLogo from '../../images/primeLogo.png';
 
 function ProductsIndex() {
     const dispatch = useDispatch();
@@ -22,9 +23,16 @@ function ProductsIndex() {
                         <div className="productContainer">
                             <img className="productImage" src={product.photoUrl} alt={product.name} />
                             <div className="containerContent">
-                                <p className='productName'>{product.name}</p>
+                                <p className="productName">{product.name}</p>
                                 <Rating rating={product.rating} />
-                                <p className='productPrice'>${product.price}</p>
+                                <div className="lastLineDiv">
+                                    <p className="productPrice">
+                                        ${product.price}
+                                    </p>
+                                    <div className="primeLogoDiv">
+                                        <img className="primeLogoImg" src={primeLogo}/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </NavLink>

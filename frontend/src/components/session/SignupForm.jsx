@@ -12,29 +12,9 @@ function SignupForm() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errors, setErrors] = useState([]);
-
+    
     if (sessionUser) return <Navigate to="/" replace={true}/>;
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     if (password === confirmPassword) {
-    //     setErrors([]);
-    //     return dispatch(sessionActions.signup({ email, username, password }))
-    //         .catch(async (res) => {
-    //         let data;
-    //         try {
-    //             // .clone() essentially allows you to read the response body twice
-    //             data = await res.clone().json();
-    //         } catch {
-    //             data = await res.text(); // Will hit this case if the server is down
-    //         }
-    //         if (data?.errors) setErrors(data.errors);
-    //         else if (data) setErrors([data]);
-    //         else setErrors([res.statusText]);
-    //         });
-    //     }
-    //     return setErrors(['Confirm Password field must be the same as the Password field']);
-    // };
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
@@ -51,7 +31,7 @@ function SignupForm() {
                 else setErrors([res.statusText]);
             });
     };
-
+    
     return (
         <div className="signup-page">
             <div className="signup-logo">

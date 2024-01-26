@@ -72,7 +72,7 @@ const ItemIndex = () => {
             <p className="middleProductPriceText">${product.price}</p>
           </div>
         <div>
-          <div className="middleDivider1"></div>
+        <div className="middleDivider1"></div>
           <p className="aboutItemTag">About this item:</p>
           <ul className="productDetailList">
             {parsedDescription.map((detail, index) => (

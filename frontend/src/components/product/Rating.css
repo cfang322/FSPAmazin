@@ -1,6 +1,7 @@
 .star-rating {
     display: inline-block;
     padding-top: 10px;
+    padding-bottom: 2px;
 }
 
 .star {
