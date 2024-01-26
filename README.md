@@ -1,7 +1,6 @@
-# README
+# WELCOME TO AMAZIN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Check out the [Live Site]()!
 
 Things you may want to cover:
 

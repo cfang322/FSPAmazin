@@ -9,6 +9,7 @@ import ProductsIndex from './components/product/ProductsIndex';
 import ItemIndex from './components/product/ItemIndex';
 import CartIndex from './components/cart/CartIndex';
 import HomePage from './components/homepage/HomePage';
+import CheckoutIndex from './components/checkout/Checkout.jsx';
 
 function Layout() {
   const dispatch = useDispatch();
@@ -65,7 +66,11 @@ const router = createBrowserRouter([
       },
       {
         path: "cart",
-        element: <CartIndex />,
+        element: <CartIndex />
+      },
+      {
+        path: "checkout",
+        element: <CheckoutIndex />
       }
     ]
   }

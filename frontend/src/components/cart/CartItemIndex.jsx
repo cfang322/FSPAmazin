@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { selectProduct } from "../../store/product";
 import { updateCartItem, deleteCartItem } from "../../store/cartItem";
-import placeholder from "../../images/placeholder.svg";
 import "./CartItemIndex.css";
 
 const CartItemIndex = ({ cartItem }) => {
@@ -31,7 +30,7 @@ const CartItemIndex = ({ cartItem }) => {
     };
     
     return (
-        <div className="cartItemIndex">
+        <div className="cartItemsIndexDiv">
             <div className="cartItem" key={cartItem.id}>
                 <NavLink to={`/products/${product.id}`}>
                     <div className="cartItemImgDiv">
@@ -50,25 +49,23 @@ const CartItemIndex = ({ cartItem }) => {
                     <div className="cartItemQuantityDiv">
                         <span className="cartItemQtySpan">Qty:</span>
                         <select
-                        value={quantity}
-                        className="quantityCartItemDropdown"
-                        id="quantityCartItem"
-                        onChange={quantityHandler}
+                            value={quantity}
+                            className="quantityCartItemDropdown"
+                            id="quantityCartItem"
+                            onChange={quantityHandler}
                         >
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
                         </select>
-                        <span className="deleteLink" onClick={deleteItem}>
-                        Delete
-                        </span>
+                        <span className="deleteLink" onClick={deleteItem}>Delete</span>
                     </div>
                 </div>
             </div>
