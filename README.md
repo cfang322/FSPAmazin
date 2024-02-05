@@ -6,11 +6,11 @@ Check out the [Live Site](https://amazin-c8vt.onrender.com/)!
 
 Amazin is a clone of Amazon, a popular e-commerce platform. Users can create accounts, explore a wide range of products, add items to their cart, complete the checkout process, and manage orders. The platform offers personalized recommendations based on user activity. To create a seamless shopping experience, I used technologies like:
 
-* Languages: Javascript, Python, HTML, and CSS
+* Languages: Javascript, HTML, and CSS
 * Frontend: React-Redux
-* Backend: Django (Python web framework)
+* Backend: Rails (Ruby web framework)
 * Database: PostgreSQL
-* Hosting: Heroku
+* Hosting: Render
 
 ## Features
 
