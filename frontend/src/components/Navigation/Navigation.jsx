@@ -55,7 +55,7 @@ function Navigation() {
                     <img src={logo} alt="amazon-logo"/>
                 </NavLink>
             </div>
-              
+                 
             <li className="dropdown">
                 <button className="dropbtn">{sessionUser ? `Hello, ${sessionUser.username}` : "Hello, sign in"}</button>
                 <div className="dropdown-content">
