@@ -1,6 +1,6 @@
 .homePageDiv {
     height: 100vh;
-    /* background-color: #dac7c7; */
+    background-image: linear-gradient(to bottom, #c0e390  0%, white  100%);
 }
 
 #bannerDiv {
