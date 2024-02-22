@@ -1,0 +1,36 @@
+/* .footerDiv {
+    background-color: #232F3E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+} */
+
+.homeFooter {
+    background-color: #232F3E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+  }
+  
+  .upperHomeFooter {
+    list-style: none;
+    position: relative;
+    top: 50px;
+    padding: 11px;
+    background-color: #37475A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+  }
+  
+  .upperHomeFooter:hover {
+    background-color: #4b5968;
+    cursor: pointer;
+  }
