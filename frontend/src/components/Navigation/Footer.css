@@ -1,22 +1,16 @@
-/* .footerDiv {
-    background-color: #232F3E;
+.footerDiv {
+    list-style: none;
+    margin: 0;
+    background-color: #131921;
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 250px;
-} */
+    height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
 
-.homeFooter {
-    background-color: #232F3E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 250px;
-  }
-  
-  .upperHomeFooter {
+.upperFooter {
     list-style: none;
     position: relative;
     top: 50px;
@@ -28,9 +22,18 @@
     cursor: pointer;
     width: 100%;
     height: 30px;
-  }
-  
-  .upperHomeFooter:hover {
+}
+
+.upperFooter:hover {
     background-color: #4b5968;
     cursor: pointer;
-  }
+}
+
+.bottomFooter {
+    background-color: #232F3E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+}

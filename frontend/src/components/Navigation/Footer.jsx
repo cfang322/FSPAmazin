@@ -1,3 +1,5 @@
+import linkedin from '../../images/linkedin.png';
+import git from '../../images/github.png';
 import './Footer.css';
 
 function Footer() {
@@ -11,10 +13,10 @@ function Footer() {
     return (
         <>
             <div className='footerDiv'>
-                <ul className='upperHomeFooter' onClick={scrollToTop}>
-                    <p className='backToTopP'>Back to top</p>
+                <ul className='upperFooter' onClick={scrollToTop}>
+                    <p className='backToTopP'>Back to Top</p>
                 </ul>
-                <ul className='homeFooter'>
+                <ul className='bottomFooter'>
                     <div className='loginLinks'>
                         <span className='loginGit'>
                             <a href="https://github.com/cfang322">
