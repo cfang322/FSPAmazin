@@ -1,3 +1,8 @@
+.homePageDiv {
+    height: 100vh;
+    /* background-color: #dac7c7; */
+}
+
 #bannerDiv {
     height: 600px;
     position: absolute;
