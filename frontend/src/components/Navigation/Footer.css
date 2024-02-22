@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; /* Changed to column layout */
+    flex-direction: column; 
     padding-left: 25px;
     padding-right: 25px;
     overflow: hidden;
@@ -42,7 +42,7 @@
 
 .gitFooter,
 .linkedinFooter {
-    margin-right: 20px; /* Adjust spacing between anchor tags */
+    margin-right: 20px; 
 }
 
 .loginLinkP {
@@ -59,54 +59,3 @@ p {
     font-size: small;
     padding-top: 10px;
 }
-
-/* .footerDiv {
-    width: 100%;
-}
-
-.upperFooter {
-    list-style: none;
-    background-color: #37475a;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    height: 60px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.upperFooter:hover {
-    background-color: #4b5968;
-    cursor: pointer;
-}
-
-.bottomFooter {
-    background-color: #232f3e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 350px;
-    padding-left: 25px;
-    padding-right: 25px;
-    overflow: hidden;
-    flex-direction: column;
-}
-
-.gitFooter,
-.linkedinFooter,
-.loginLinkP {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px; 
-}
-
-p {
-    color: white;
-    margin: 0;
-    font-weight: 400;
-    font-size: small;
-    padding-top: 10px;
-} */

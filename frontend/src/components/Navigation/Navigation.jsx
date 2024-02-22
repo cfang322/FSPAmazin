@@ -39,17 +39,6 @@ function Navigation() {
     return (
     <>
         <div className='navBar'>
-            <div className='git'>
-                <a href="https://github.com/cfang322">
-                    <img src={github} alt="github-link" />
-                </a>
-            </div>
-            <div className='linkedin'>
-                <a href="https://www.linkedin.com/in/yaqi-fang-125807250/">
-                    <img src={linkedin} alt="linkedin-link" />
-                </a>
-            </div>
-            
             <div className='home'>
                 <NavLink to="/">
                     <img src={logo} alt="amazon-logo"/>
