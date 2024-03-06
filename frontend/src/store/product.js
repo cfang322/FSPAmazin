@@ -36,7 +36,7 @@ const productReducer = (state = {}, action) => {
     const newState = { ...state };
     switch (action.type) {
     case RECEIVE_PRODUCTS:
-        return action.products;
+        return {...state, ...action.products};
     case RECEIVE_PRODUCT:
         newState[action.product.id] = action.product;
         return newState;
