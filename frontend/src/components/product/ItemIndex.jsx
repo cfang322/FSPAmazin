@@ -127,27 +127,3 @@ const ItemIndex = () => {
 };
 
 export default ItemIndex;
-
-
-{/* <ul className="upperProductFooter">
-{/* <p className='backToTopP'>Back to top</p> */}
-// </ul>
-{/* <ul className="productFooter">
-<div className="loginLinks">
-  <span className="loginGit">
-    <a href="https://github.com/cfang322">
-      <img src={git} alt="git-link" />
-    </a>
-  </span>
-  <span className="loginLinkedin">
-    <a href="https://www.linkedin.com/in/yaqi-fang-125807250/">
-      <img src={linkedin} alt="linkedin-link" />
-    </a>
-  </span>
-  <div className="backToHome">
-    <NavLink to="/">
-      <p className="loginLink">Back to Home</p>
-    </NavLink>
-  </div>
-</div> */}
-// </ul> 

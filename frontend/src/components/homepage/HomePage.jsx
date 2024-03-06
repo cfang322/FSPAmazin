@@ -1,4 +1,3 @@
-// import { NavLink } from "react-router-dom";
 import banner from "../../images/amazon-banner2.jpg";
 import './HomePage.css';
 
@@ -13,24 +12,3 @@ const HomePage = () => {
 }
 
 export default HomePage;
-
-
-
-
-{/* <div className="sectionsDiv">
-    <div className="allProductsDiv">
-        <h1 id="allProductsH1">Save Now!</h1>
-        <NavLink id="allProductsAncho" href="/products">
-            <img src="" alt="allProductsDivImg" className="allProductsDivImg"/>
-        </NavLink>
-    </div>
-    <div className="homeDiv">
-
-    </div>
-    <div className="beautyDiv">
-
-    </div>
-    <div className="groceryDiv">
-
-    </div>
-</div> */}
