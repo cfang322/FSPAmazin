@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import { memoizedSelectCartItems } from '../../store/cartItem';
 import './Navigation.css';
-import github from '../../images/github.png';
-import linkedin from '../../images/linkedin.png';
 import logo from '../../images/logo.png';
 import cart from '../../images/cart.png';
 

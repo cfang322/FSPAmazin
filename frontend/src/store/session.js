@@ -1,7 +1,5 @@
 import csrfFetch from './csrf';
 import { fetchCart } from './cartItem';
-// still works w/o it
-// import { fetchProducts } from './product';
 
 const SET_USER = "session/setUser";
 const REMOVE_USER = "session/removeUser";
@@ -29,9 +27,6 @@ export const restoreSession = () => async dispatch => {
     storeCSRFToken(response);
     const data = await response.json();
     dispatch(setUser(data.user));
-    // dispatch(fetchCart());
-    // still works w/o it for some reason
-    // dispatch(fetchProducts());
     return response;
 };
 
@@ -42,7 +37,6 @@ export const login = ({ credential, password }) => async dispatch => {
     });
     const data = await response.json();
     dispatch(setUser(data.user));
-    // dispatch(fetchProducts());
     dispatch(fetchCart());
     return response;
 };
