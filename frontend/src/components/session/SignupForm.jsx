@@ -15,22 +15,53 @@ function SignupForm() {
     
     if (sessionUser) return <Navigate to="/" replace={true}/>;
     
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     setErrors([]);
+    //     return dispatch(sessionActions.signup({ email, username, password }))
+    //         .catch(async (res) => {
+    //             let data;
+    //             try {
+    //             data = await res.clone().json();
+    //             } catch {
+    //             data = await res.text();
+    //             }
+    //             if (data?.errors) setErrors(data.errors);
+    //             else if (data) setErrors([data]);
+    //             else setErrors([res.statusText]);
+    //         });
+    // };
     const handleSubmit = (e) => {
         e.preventDefault();
-        setErrors([]);
-        return dispatch(sessionActions.signup({ email, username, password }))
-            .catch(async (res) => {
-                let data;
-                try {
+    
+        if (password === confirmPassword && email.includes("@")) {
+          setErrors([]);
+          return dispatch(sessionActions.signup({ email, name, password })).catch(
+            async (res) => {
+              let data;
+              try {
+                // .clone() essentially allows you to read the response body twice
                 data = await res.clone().json();
-                } catch {
-                data = await res.text();
-                }
-                if (data?.errors) setErrors(data.errors);
-                else if (data) setErrors([data]);
-                else setErrors([res.statusText]);
-            });
-    };
+              } catch {
+                data = await res.text(); // Will hit this case if the server is down
+              }
+              if (data?.errors) setErrors(data.errors);
+              else if (data) setErrors([data]);
+              else setErrors([res.statusText]);
+            }
+          );
+        }
+        if (password !== confirmPassword) {
+          return setErrors([
+            "Password must match confirmed password",
+          ]);
+        } else if (email.includes("@")) {
+          return setErrors([
+            "Must be a valid email",
+          ]);
+        }
+        return setErrors(["Must be a valid email"]);
+      };
     
     return (
         <div className="signup-page">
@@ -46,6 +77,9 @@ function SignupForm() {
                     {errors.map(error => <li key={error}>{error}</li>)}
                 </ul>
                 <h1 className="signUpH1">Create account</h1>
+                <ul className='errors'>
+            {errors.map(error => <li key={error}>{error}</li>)}
+          </ul>
                     <label className="signup-label">Your name
                         <input
                             type="text"
