@@ -62,7 +62,7 @@ const CartIndex = () => {
                 <ul className="CartIndexUl">
                     {cartItems.map((cartItem, index) => (
                         <li className="cartIndexLi" key={`${cartItem.id}_${index}`}>
-                        <CartItemIndex cartItem={cartItem} />
+                            <CartItemIndex cartItem={cartItem} />
                         </li>
                     ))}
                     <div className="sideCheckoutContainer">
