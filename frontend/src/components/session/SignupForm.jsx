@@ -72,14 +72,14 @@ function SignupForm() {
             </div>
             
             <form className="signup-form" onSubmit={handleSubmit}>
+                {/* <ul className='errors'>
+                    {errors.map(error => <li key={error}>{error}</li>)}
+                </ul> */}
                 <div className="card2">
+                <h1 className="signUpH1">Create account</h1>
                 <ul className='errors'>
                     {errors.map(error => <li key={error}>{error}</li>)}
                 </ul>
-                <h1 className="signUpH1">Create account</h1>
-                <ul className='errors'>
-            {errors.map(error => <li key={error}>{error}</li>)}
-          </ul>
                     <label className="signup-label">Your name
                         <input
                             type="text"
@@ -116,14 +116,14 @@ function SignupForm() {
                     </label>
                 <br/>
                 <button type="submit" className="signupBtn">Continue</button>
-                <p>
-                    By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
-                </p>
                 <div className="inside-divider"></div>
                 <p className='question'>Already have an account?
                     <NavLink className='have-acc' to='/login'>Sign in</NavLink>
                 </p>
                 </div>
+                <p>
+                    By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
+                </p>
             </form>
             <div className="form-divider">
                 <div className="links">
