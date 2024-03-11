@@ -92,6 +92,10 @@ const router = createBrowserRouter([
             <CheckoutIndex />
             <Footer />
           </>
+      },
+      {
+        path: "/",
+        elements: <HomePage />
       }
     ]
   }

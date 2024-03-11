@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { memoizedSelectCartItems, fetchCart } from "../../store/cartItem";
-import { selectProductsArray } from "../../store/product";
+import { fetchProducts, selectProductsArray } from "../../store/product";
 import CartItemIndex from "./CartItemIndex";
 import cart from "../../images/cart.png";
 
@@ -13,6 +13,7 @@ const CartIndex = () => {
     const sessionUser = useSelector((state) => state.session.user);
     useEffect(() => {
         dispatch(fetchCart());
+        dispatch(fetchProducts());
     }, [dispatch]);
     
     let total = 0.00;
@@ -27,7 +28,7 @@ const CartIndex = () => {
             }
         });
     });
-
+    
     return (
         <div className="CartPageDiv">
             {cartItems.length === 0 ? (

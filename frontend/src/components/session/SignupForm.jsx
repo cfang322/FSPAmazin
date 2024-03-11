@@ -15,22 +15,53 @@ function SignupForm() {
     
     if (sessionUser) return <Navigate to="/" replace={true}/>;
     
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     setErrors([]);
+    //     return dispatch(sessionActions.signup({ email, username, password }))
+    //         .catch(async (res) => {
+    //             let data;
+    //             try {
+    //             data = await res.clone().json();
+    //             } catch {
+    //             data = await res.text();
+    //             }
+    //             if (data?.errors) setErrors(data.errors);
+    //             else if (data) setErrors([data]);
+    //             else setErrors([res.statusText]);
+    //         });
+    // };
     const handleSubmit = (e) => {
         e.preventDefault();
-        setErrors([]);
-        return dispatch(sessionActions.signup({ email, username, password }))
-            .catch(async (res) => {
-                let data;
-                try {
+    
+        if (password === confirmPassword && email.includes("@")) {
+          setErrors([]);
+          return dispatch(sessionActions.signup({ email, name, password })).catch(
+            async (res) => {
+              let data;
+              try {
+                // .clone() essentially allows you to read the response body twice
                 data = await res.clone().json();
-                } catch {
-                data = await res.text();
-                }
-                if (data?.errors) setErrors(data.errors);
-                else if (data) setErrors([data]);
-                else setErrors([res.statusText]);
-            });
-    };
+              } catch {
+                data = await res.text(); // Will hit this case if the server is down
+              }
+              if (data?.errors) setErrors(data.errors);
+              else if (data) setErrors([data]);
+              else setErrors([res.statusText]);
+            }
+          );
+        }
+        if (password !== confirmPassword) {
+          return setErrors([
+            "Password must match confirmed password",
+          ]);
+        } else if (email.includes("@")) {
+          return setErrors([
+            "Must be a valid email",
+          ]);
+        }
+        return setErrors(["Must be a valid email"]);
+      };
     
     return (
         <div className="signup-page">
@@ -41,11 +72,14 @@ function SignupForm() {
             </div>
             
             <form className="signup-form" onSubmit={handleSubmit}>
+                {/* <ul className='errors'>
+                    {errors.map(error => <li key={error}>{error}</li>)}
+                </ul> */}
                 <div className="card2">
+                <h1 className="signUpH1">Create account</h1>
                 <ul className='errors'>
                     {errors.map(error => <li key={error}>{error}</li>)}
                 </ul>
-                <h1 className="signUpH1">Create account</h1>
                     <label className="signup-label">Your name
                         <input
                             type="text"
@@ -82,14 +116,14 @@ function SignupForm() {
                     </label>
                 <br/>
                 <button type="submit" className="signupBtn">Continue</button>
-                <p>
-                    By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
-                </p>
                 <div className="inside-divider"></div>
                 <p className='question'>Already have an account?
                     <NavLink className='have-acc' to='/login'>Sign in</NavLink>
                 </p>
                 </div>
+                <p>
+                    By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
+                </p>
             </form>
             <div className="form-divider">
                 <div className="links">
