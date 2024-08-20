@@ -12,6 +12,10 @@ Amazin is a clone of Amazon, a popular e-commerce platform. Users can create acc
 * Database: PostgreSQL
 * Hosting: Render
 
+### Run Commands
+backend: rails s (http://localhost:5000/)
+frontend: npm run dev (http://localhost:5173/)
+
 ## Features
 
 ### Homepage & Navigation
