@@ -12,10 +12,9 @@ function SignupForm() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errors, setErrors] = useState([]);
-
     // Redirect to homepage if user is already logged in
-    if (sessionUser) return <Navigate to="/" replace={true} />;
-
+    if (sessionUser) return <Navigate to="/" replace={true}/>;
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         if (password === confirmPassword) {
@@ -35,7 +34,7 @@ function SignupForm() {
         }
         return setErrors(['Confirm Password field must be the same as the Password field']);
     };
-
+    
     return (
         <div className="signup-page">
             <div className="signup-logo">

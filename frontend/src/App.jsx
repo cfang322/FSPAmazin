@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Outlet, createBrowserRouter, RouterProvider, useLocation } from 'react-router-dom';
+import * as sessionActions from './store/session';
 import LoginForm from './components/session/LoginForm';
 import SignupForm from './components/session/SignupForm';
 import Navigation from './components/Navigation/Navigation';
-import * as sessionActions from './store/session';
 import ProductsIndex from './components/product/ProductsIndex';
 import ItemIndex from './components/product/ItemIndex';
 import CartIndex from './components/cart/CartIndex';
 import HomePage from './components/homepage/HomePage';
-import CheckoutIndex from './components/checkout/Checkout.jsx';
+import CheckoutIndex from './components/checkout/Checkout';
+import Footer from './components/Navigation/Footer';
 
 function Layout() {
   const dispatch = useDispatch();
@@ -46,7 +47,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <HomePage />
+        element: 
+          <>
+            <HomePage />
+            <Footer />
+          </>
       },
       {
         path: 'login',
@@ -58,19 +63,39 @@ const router = createBrowserRouter([
       },
       {
         path: 'products',
-        element: <ProductsIndex />
+        element:
+          <>
+            <ProductsIndex />
+            <Footer />
+          </>
       },
       {
         path: 'products/:productId',
-        element: <ItemIndex />
+        element: 
+          <>
+            <ItemIndex />
+            <Footer />
+          </>
       },
       {
         path: "cart",
-        element: <CartIndex />
+        element: 
+          <>
+            <CartIndex />
+            <Footer />
+          </>
       },
       {
         path: "checkout",
-        element: <CheckoutIndex />
+        element: 
+          <>
+            <CheckoutIndex />
+            <Footer />
+          </>
+      },
+      {
+        path: "/",
+        elements: <HomePage />
       }
     ]
   }

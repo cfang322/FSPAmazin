@@ -1,3 +1,8 @@
+.homePageDiv {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #c0e390  0%, white  100%);
+}
+
 #bannerDiv {
     height: 600px;
     position: absolute;
