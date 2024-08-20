@@ -12,26 +12,30 @@ function SignupForm() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errors, setErrors] = useState([]);
-    
-    if (sessionUser) return <Navigate to="/" replace={true}/>;
-    
+
+    // Redirect to homepage if user is already logged in
+    if (sessionUser) return <Navigate to="/" replace={true} />;
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        setErrors([]);
-        return dispatch(sessionActions.login({ email, username, password }))
-            .catch(async (res) => {
-                let data;
-                try {
-                data = await res.clone().json();
-                } catch {
-                data = await res.text();
-                }
-                if (data?.errors) setErrors(data.errors);
-                else if (data) setErrors([data]);
-                else setErrors([res.statusText]);
-            });
+        if (password === confirmPassword) {
+            setErrors([]);
+            return dispatch(sessionActions.signup({ email, username, password }))
+                .catch(async (res) => {
+                    let data;
+                    try {
+                        data = await res.clone().json();
+                    } catch {
+                        data = await res.text();
+                    }
+                    if (data?.errors) setErrors(data.errors);
+                    else if (data) setErrors([data]);
+                    else setErrors([res.statusText]);
+                });
+        }
+        return setErrors(['Confirm Password field must be the same as the Password field']);
     };
-    
+
     return (
         <div className="signup-page">
             <div className="signup-logo">
@@ -39,13 +43,13 @@ function SignupForm() {
                     <img src="https://pbs.twimg.com/profile_images/1722015850168037376/OiNYYeZQ_400x400.jpg" alt="Amazin Logo"/>
                 </NavLink>
             </div>
-            
+
             <form className="signup-form" noValidate="novalidate" onSubmit={handleSubmit}>
                 <div className="card2">
-                <ul className='errors'>
-                    {errors.map(error => <li key={error}>{error}</li>)}
-                </ul>
-                <h1 className="signUpH1">Create account</h1>
+                    <ul className='errors'>
+                        {errors.map(error => <li key={error}>{error}</li>)}
+                    </ul>
+                    <h1 className="signUpH1">Create account</h1>
                     <label className="signup-label">Your name
                         <input
                             type="text"
@@ -80,15 +84,15 @@ function SignupForm() {
                             required
                         />
                     </label>
-                <br/>
-                <button type="submit" className="signupBtn">Continue</button>
-                <p>
-                    By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
-                </p>
-                <div className="inside-divider"></div>
-                <p className='question'>Already have an account?
-                    <NavLink className='have-acc' to='/login'>Sign in</NavLink>
-                </p>
+                    <br/>
+                    <button type="submit" className="signupBtn">Continue</button>
+                    <p>
+                        By continuing, you agree to Amazin&apos;s Conditions of Use and Privacy Notice.
+                    </p>
+                    <div className="inside-divider"></div>
+                    <p className='question'>Already have an account?
+                        <NavLink className='have-acc' to='/login'>Sign in</NavLink>
+                    </p>
                 </div>
             </form>
             <div className="form-divider">
